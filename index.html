@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HAICHI | Self-hosted multi-agent orchestration</title>
+  <meta name="description" content="Run a private AI team on your Windows PC. HAICHI coordinates local and cloud models through agents, plans, discussions, and pipelines.">
+  <meta name="theme-color" content="#06111f">
+  <link rel="icon" href="../haichi.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "HAICHI",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Windows 10, Windows 11",
+    "softwareVersion": "1.1.0",
+    "description": "Self-hosted multi-agent orchestration for local and cloud AI models."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="HAICHI home">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span><strong>HAICHI</strong><small>Multi-Agent Orchestration</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#workflow">How it works</a>
+      <a href="#security">Security</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#download">Download</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch color theme">Light</button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Windows self-hosted AI workspace</p>
+        <h1>Run a private AI team on your own PC.</h1>
+        <p class="hero-lead">HAICHI connects local Ollama models and optional cloud providers into one controllable system for agents, plans, discussions, and repeatable pipelines.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#download">Get HAICHI for Windows</a>
+          <a class="button secondary" href="#workflow">See how it works</a>
+        </div>
+        <p class="hero-note">Local-first. Cloud-ready. No public server required.</p>
+      </div>
+
+      <aside class="architecture-card" aria-label="HAICHI system architecture">
+        <p class="architecture-label">Inside HAICHI v1.1</p>
+        <h2>One runtime. Clear boundaries.</h2>
+        <div class="architecture-row"><span>Local intelligence</span><strong>Ollama models</strong><small>Private inference with bounded GPU concurrency</small></div>
+        <div class="architecture-row"><span>Optional expansion</span><strong>4 cloud providers</strong><small>OpenAI, Anthropic, Gemini, and GitHub Models</small></div>
+        <div class="architecture-row"><span>Orchestration</span><strong>Agents and workflows</strong><small>Channels, plans, discussions, and pipelines</small></div>
+        <div class="architecture-row"><span>Persistence</span><strong>Local SQLite</strong><small>Plans, memory, events, and conversation state</small></div>
+        <div class="architecture-footer"><span><i></i> Release checks passing</span><strong>47 tests</strong></div>
+      </aside>
+    </section>
+
+    <section class="proof" aria-label="Product verification">
+      <div><strong>47</strong><span>automated tests</span></div>
+      <div><strong>4</strong><span>cloud providers</span></div>
+      <div><strong>2</strong><span>bounded local agents</span></div>
+      <div><strong>1</strong><span>private Windows runtime</span></div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">One control surface</p>
+        <h2>More than another chat window.</h2>
+        <p>Build a working system of specialized agents, then see what they are doing, which model they use, and where every task stands.</p>
+      </div>
+      <div class="feature-grid">
+        <article><span>01</span><h3>Local model discovery</h3><p>Detect installed Ollama models, inspect their fit for your hardware, and assign defaults per agent.</p></article>
+        <article><span>02</span><h3>Single or multiple agents</h3><p>Send work to one agent or dispatch several independent responses concurrently with bounded GPU usage.</p></article>
+        <article><span>03</span><h3>Plans and pipelines</h3><p>Run parallel plan tasks, retry incomplete work, or pass output through a deterministic agent chain.</p></article>
+        <article><span>04</span><h3>Structured discussions</h3><p>Let agents challenge and refine an approach turn by turn while keeping each response correlated.</p></article>
+        <article><span>05</span><h3>Optional cloud models</h3><p>Connect OpenAI, Anthropic, Gemini, or GitHub Models without making cloud access mandatory.</p></article>
+        <article><span>06</span><h3>Persistent state</h3><p>Keep plans, discussions, events, conversations, and memory in a local SQLite database.</p></article>
+      </div>
+    </section>
+
+    <section class="section workflow-section" id="workflow">
+      <div class="section-heading">
+        <p class="eyebrow">A clear operating loop</p>
+        <h2>Configure once. Coordinate repeatedly.</h2>
+      </div>
+      <ol class="workflow">
+        <li><span>1</span><div><h3>Connect models</h3><p>Use Ollama locally or add an optional provider key from Settings. HAICHI discovers the available model list.</p></div></li>
+        <li><span>2</span><div><h3>Assign agents</h3><p>Give each agent a role, system prompt, provider, model, and carefully scoped capabilities.</p></div></li>
+        <li><span>3</span><div><h3>Run the workflow</h3><p>Choose a channel, plan, discussion, or pipeline and override models only when the task needs it.</p></div></li>
+        <li><span>4</span><div><h3>Inspect and recover</h3><p>Review events and results, cancel active work, retry failures, and retain completed plan tasks.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="section security-section" id="security">
+      <div class="security-copy">
+        <p class="eyebrow">Private by default</p>
+        <h2>Your orchestration layer stays on your machine.</h2>
+        <p>HAICHI is designed for a trusted Windows workstation, not a public multi-tenant SaaS. Localhost stays convenient while remote access can be restricted to a password-protected Tailscale connection.</p>
+        <ul>
+          <li>Dangerous agent tools are disabled by default.</li>
+          <li>Filesystem API access is opt-in and workspace-bound.</li>
+          <li>Provider keys remain in an ignored local credential file.</li>
+          <li>Cloud usage happens only for agents you explicitly configure.</li>
+        </ul>
+      </div>
+      <div class="security-card">
+        <p>Runtime policy</p>
+        <div><span>Localhost</span><strong>Direct</strong></div>
+        <div><span>Tailscale</span><strong>Protected</strong></div>
+        <div><span>Public internet</span><strong>Not recommended</strong></div>
+        <div><span>Dangerous tools</span><strong>Off by default</strong></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section-heading compact">
+        <p class="eyebrow">FAQ</p>
+        <h2>Before you install.</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Does HAICHI require paid AI APIs?</summary><p>No. HAICHI can run entirely with local Ollama models. Cloud providers are optional and billed separately by those providers.</p></details>
+        <details><summary>Will it work with an 8 GB GPU?</summary><p>Yes. The default setup limits local inference to two concurrent agents and can reduce concurrency after a timeout or memory failure.</p></details>
+        <details><summary>Can I access it from my phone?</summary><p>Yes. Run HAICHI in Tailscale mode with a unique remote password, then open the private Tailscale address from your phone.</p></details>
+        <details><summary>Can agents modify my files?</summary><p>Only when you explicitly enable the relevant capabilities. Dangerous tools and filesystem APIs start disabled.</p></details>
+        <details><summary>Is this a hosted SaaS product?</summary><p>No. HAICHI v1.1 is a self-hosted Windows product built for a single trusted workstation.</p></details>
+      </div>
+    </section>
+
+    <section class="download-section" id="download">
+      <div>
+        <p class="eyebrow">Windows release</p>
+        <h2>Put your AI team on your own hardware.</h2>
+        <p>Requires Windows 10 or 11. Ollama is recommended for local models. Tailscale is optional for private remote access.</p>
+      </div>
+      <div class="download-actions">
+        <a class="button primary" href="downloads/HAICHI-v1.1.0-windows-x64.zip" download>Download v1.1.0</a>
+        <button class="button secondary copy-install" type="button" data-command="install.bat">Copy install command</button>
+        <small>Self-hosted Windows x64</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">H</span><span><strong>HAICHI</strong><small>Collaborate. Plan. Execute. Verify.</small></span></a>
+    <p>Self-hosted multi-agent orchestration. <span id="year"></span></p>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
