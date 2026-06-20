@@ -10,7 +10,7 @@ function setTheme(theme) {
   localStorage.setItem('haichi-site-theme', theme);
 }
 
-setTheme(localStorage.getItem('haichi-site-theme') || 'dark');
+setTheme(localStorage.getItem('haichi-site-theme') || 'light');
 
 themeButton.addEventListener('click', () => {
   setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
