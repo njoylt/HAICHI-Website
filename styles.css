@@ -63,6 +63,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .brand { display:flex;align-items:center;gap:10px;min-width:max-content }
 .brand-mark { width:34px;height:34px;display:grid;place-items:center;border:1px solid color-mix(in srgb,var(--blue) 70%,var(--line));border-radius:8px;background:rgba(42,168,255,.09);color:var(--blue);font-weight:900 }
+.brand-logo { width:34px;height:34px;object-fit:contain;border-radius:8px }
 .brand strong { display:block;letter-spacing:.08em;font-size:14px }
 .brand small { display:block;color:var(--muted);font-size:9px;letter-spacing:.04em }
 
