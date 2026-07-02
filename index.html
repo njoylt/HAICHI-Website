@@ -84,12 +84,12 @@
         <div class="architecture-row"><span>Optional expansion</span><strong>4 cloud providers</strong><small>OpenAI, Anthropic, Gemini, and GitHub Models</small></div>
         <div class="architecture-row"><span>Orchestration</span><strong>Agents and workflows</strong><small>Channels, plans, discussions, and pipelines</small></div>
         <div class="architecture-row"><span>Persistence</span><strong>Local SQLite</strong><small>Plans, memory, events, and conversation state</small></div>
-        <div class="architecture-footer"><span><i></i> v1.1.0 release verified</span><strong>135 tests</strong></div>
+        <div class="architecture-footer"><span><i></i> v1.1.0 release verified</span><strong>137 tests</strong></div>
       </aside>
     </section>
 
     <section class="proof" aria-label="Product verification">
-      <div><strong>135</strong><span>automated tests</span></div>
+      <div><strong>137</strong><span>automated tests</span></div>
       <div><strong>4</strong><span>cloud providers</span></div>
       <div><strong>2</strong><span>bounded local agents</span></div>
       <div><strong>1</strong><span>private Windows runtime</span></div>
@@ -107,7 +107,7 @@
         <article><span>03</span><h3>Plans and pipelines</h3><p>Run parallel plan tasks, retry incomplete work, or pass output through a deterministic agent chain.</p></article>
         <article><span>04</span><h3>Structured discussions</h3><p>Let agents challenge and refine an approach turn by turn while keeping each response correlated.</p></article>
         <article><span>05</span><h3>Optional cloud models</h3><p>Connect OpenAI, Anthropic, Gemini, or GitHub Models without making cloud access mandatory.</p></article>
-        <article><span>06</span><h3>Persistent state</h3><p>Keep plans, discussions, events, conversations, and memory in a local SQLite database.</p></article>
+        <article><span>06</span><h3>Workspace file permissions</h3><p>Let selected models read or edit files only inside the workspace folders you approve.</p></article>
       </div>
     </section>
 
@@ -131,7 +131,7 @@
         <p>HAICHI is designed for a trusted Windows workstation, not a public multi-tenant SaaS. Localhost stays convenient while remote access can be restricted to a password-protected Tailscale connection.</p>
         <ul>
           <li>Dangerous agent tools are disabled by default.</li>
-          <li>Filesystem API access is opt-in and workspace-bound.</li>
+          <li>Agent file access is opt-in, model-scoped, and workspace-bound.</li>
           <li>Provider keys remain in an ignored local credential file.</li>
           <li>Cloud usage happens only for agents you explicitly configure.</li>
         </ul>
@@ -208,7 +208,7 @@
         <details><summary>Does HAICHI require paid AI APIs?</summary><p>No. HAICHI can run entirely with local Ollama models. Cloud providers are optional and billed separately by those providers.</p></details>
         <details><summary>Will it work with an 8 GB GPU?</summary><p>Yes. The default setup limits local inference to two concurrent agents and can reduce concurrency after a timeout or memory failure.</p></details>
         <details><summary>Can I access it from my phone?</summary><p>Yes. Run HAICHI in Tailscale mode with a unique remote password, then open the private Tailscale address from your phone.</p></details>
-        <details><summary>Can agents modify my files?</summary><p>Only when you explicitly enable the relevant capabilities. Dangerous tools and filesystem APIs start disabled.</p></details>
+        <details><summary>Can agents modify my files?</summary><p>Only when you explicitly enable workspace-scoped permissions for selected models and folders. Write, delete, and command execution controls are marked as risk controls and start disabled.</p></details>
         <details><summary>Is this a hosted SaaS product?</summary><p>No. HAICHI v1.1 is a self-hosted Windows product built for a single trusted workstation.</p></details>
       </div>
     </section>
@@ -217,7 +217,7 @@
       <div>
         <p class="eyebrow">Windows release</p>
         <h2>Put your AI team on your own hardware.</h2>
-        <p>Requires Windows 10 or 11. Ollama is recommended for local models. Tailscale is optional for private remote access. Current v1.1.0 packages passed 135 automated checks and packaged plugin verification.</p>
+        <p>Requires Windows 10 or 11. Ollama is recommended for local models. Tailscale is optional for private remote access. Current v1.1.0 packages passed 137 automated checks with packaged plugin and workspace permission verification.</p>
       </div>
       <div class="download-actions">
         <a class="button primary" href="https://haichi.lemonsqueezy.com/checkout/buy/80cf9d56-652b-4b5e-baf9-1cf53c7b4eab">Buy Developer Pro (€49)</a>
