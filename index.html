@@ -96,7 +96,7 @@
         "name": "Can agents modify my files?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Only when you explicitly enable workspace-scoped permissions for selected models and folders. Write, delete, and command execution controls are marked as risk controls and start disabled."
+          "text": "Only when you explicitly enable workspace-scoped permissions for selected models and folders. Write, delete, and command execution controls are marked as risk controls and start disabled. Tool reliability depends on the selected model following structured instructions."
         }
       },
       {
@@ -165,7 +165,7 @@
       <div>
         <p class="eyebrow">New in v1.1.0</p>
         <h2>Agents can work inside the workspace you approve.</h2>
-        <p>Enable file access only for selected models and selected folders. Read, edit, delete, and command execution controls are visible risk settings, so local automation stays bounded to the project you choose.</p>
+        <p>Enable file access only for selected models and selected folders. Read, edit, delete, and command execution controls are visible risk settings, so local automation stays bounded to the project you choose. Stronger coder or cloud models are recommended for file-changing tools.</p>
       </div>
       <ul>
         <li>Model allowlist for file-capable agents</li>
@@ -287,7 +287,7 @@
         <details><summary>Does HAICHI require paid AI APIs?</summary><p>No. HAICHI can run entirely with local Ollama models. Cloud providers are optional and billed separately by those providers.</p></details>
         <details><summary>Will it work with an 8 GB GPU?</summary><p>Yes. The default setup limits local inference to two concurrent agents and can reduce concurrency after a timeout or memory failure.</p></details>
         <details><summary>Can I access it from my phone?</summary><p>Yes. Run HAICHI in Tailscale mode with a unique remote password, then open the private Tailscale address from your phone.</p></details>
-        <details><summary>Can agents modify my files?</summary><p>Only when you explicitly enable workspace-scoped permissions for selected models and folders. Write, delete, and command execution controls are marked as risk controls and start disabled.</p></details>
+        <details><summary>Can agents modify my files?</summary><p>Only when you explicitly enable workspace-scoped permissions for selected models and folders. Write, delete, and command execution controls are marked as risk controls and start disabled. Tool reliability depends on the selected model following structured instructions, so stronger coder or cloud models are recommended for file-changing actions.</p></details>
         <details><summary>Is this a hosted SaaS product?</summary><p>No. HAICHI v1.1 is a self-hosted Windows product built for a single trusted workstation.</p></details>
       </div>
     </section>
