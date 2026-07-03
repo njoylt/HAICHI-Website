@@ -100,6 +100,55 @@ h1 { font-size:clamp(44px,6vw,76px);line-height:1.02;letter-spacing:-.055em;marg
 .proof div { padding:22px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-right:1px solid var(--line) }.proof div:first-child { border-left:1px solid var(--line);border-radius:10px 0 0 10px }.proof div:last-child { border-radius:0 10px 10px 0 }
 .proof strong { display:block;color:var(--blue);font-size:24px }.proof span { color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.08em }
 
+.release-note {
+  max-width: 1132px;
+  margin: 0 auto 38px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 34px;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--green) 45%, var(--line));
+  border-radius: 14px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--panel) 92%, var(--green)), var(--panel-2));
+  box-shadow: var(--shadow);
+}
+.release-note h2 {
+  max-width: 720px;
+  font-size: clamp(26px, 3.4vw, 40px);
+}
+.release-note p:last-child {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.release-note ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.release-note li {
+  position: relative;
+  padding: 11px 0 11px 22px;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  color: var(--muted);
+  font-size: 13px;
+}
+.release-note li:last-child {
+  border-bottom: 0;
+}
+.release-note li:before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 18px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
 .section { max-width:1180px;margin:0 auto;padding:95px 24px }
 .section-heading { max-width:700px;margin-bottom:42px }.section-heading.compact { margin-bottom:28px }
 h2 { font-size:clamp(32px,4.5vw,52px);line-height:1.08;letter-spacing:-.04em;margin:0 0 18px }
@@ -237,6 +286,7 @@ footer { max-width:1180px;margin:0 auto;padding:26px 24px 40px;border-top:1px so
   nav { position:absolute;left:16px;right:16px;top:65px;display:none;flex-direction:column;align-items:stretch;gap:0;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--panel);box-shadow:var(--shadow) } nav.open { display:flex } nav a { padding:12px }
   .hero { grid-template-columns:1fr;padding-top:72px;gap:48px }.architecture-card { max-width:650px }
   .feature-grid { grid-template-columns:repeat(2,1fr) }.workflow-section,.security-section { grid-template-columns:1fr;gap:35px }
+  .release-note { grid-template-columns:1fr;margin-left:18px;margin-right:18px }
   .pricing-grid { grid-template-columns:1fr;gap:30px }
   .download-section { margin-left:18px;margin-right:18px;flex-direction:column;align-items:flex-start }.download-actions { width:100% }
 }

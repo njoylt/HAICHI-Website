@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HAICHI | Self-hosted multi-agent orchestration</title>
-  <meta name="description" content="Run a private AI team on your Windows PC. HAICHI coordinates local and cloud models through agents, plans, discussions, and pipelines.">
+  <meta name="description" content="HAICHI v1.1.0 runs a private AI team on your Windows PC with local Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions.">
   <meta name="google-site-verification" content="yWgFdJ7h8Sa760NpMlXw9jPENgZUGm8bwr2DKXWKdbU">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#06111f">
@@ -14,12 +14,12 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="HAICHI">
   <meta property="og:title" content="HAICHI | Self-hosted multi-agent orchestration">
-  <meta property="og:description" content="Run a private AI team on your Windows PC. HAICHI coordinates local and cloud models through agents, plans, discussions, and pipelines.">
+  <meta property="og:description" content="HAICHI v1.1.0 runs a private AI team on your Windows PC with local Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions.">
   <meta property="og:url" content="https://haichi.app/">
   <meta property="og:image" content="https://haichi.app/haichi-app-logo.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="HAICHI | Self-hosted multi-agent orchestration">
-  <meta name="twitter:description" content="Run a private AI team on your Windows PC. HAICHI coordinates local and cloud models through agents, plans, discussions, and pipelines.">
+  <meta name="twitter:description" content="HAICHI v1.1.0 runs a private AI team on your Windows PC with local Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions.">
   <meta name="twitter:image" content="https://haichi.app/haichi-app-logo.png">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
@@ -67,14 +67,14 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> Windows self-hosted AI workspace</p>
+        <p class="eyebrow"><span></span> HAICHI v1.1.0 is live</p>
         <h1>Run a private AI team on your own PC.</h1>
-        <p class="hero-lead">HAICHI connects local Ollama models and optional cloud providers into one controllable system for agents, plans, discussions, and repeatable pipelines.</p>
+        <p class="hero-lead">HAICHI connects local Ollama models and optional cloud providers into one controllable Windows workspace for agents, plans, discussions, repeatable pipelines, and bounded file access.</p>
         <div class="hero-actions">
           <a class="button primary" href="#download">Get HAICHI for Windows</a>
           <a class="button secondary" href="#workflow">See how it works</a>
         </div>
-        <p class="hero-note">Local-first. Cloud-ready. No public server required.</p>
+        <p class="hero-note">Local-first. Cloud-ready. Workspace permissions are explicit and off by default.</p>
       </div>
 
       <aside class="architecture-card" aria-label="HAICHI system architecture">
@@ -91,8 +91,21 @@
     <section class="proof" aria-label="Product verification">
       <div><strong>137</strong><span>automated tests</span></div>
       <div><strong>4</strong><span>cloud providers</span></div>
-      <div><strong>2</strong><span>bounded local agents</span></div>
+      <div><strong>Safe</strong><span>workspace-bound tools</span></div>
       <div><strong>1</strong><span>private Windows runtime</span></div>
+    </section>
+
+    <section class="release-note" aria-label="Version 1.1 release">
+      <div>
+        <p class="eyebrow">New in v1.1.0</p>
+        <h2>Agents can work inside the workspace you approve.</h2>
+        <p>Enable file access only for selected models and selected folders. Read, edit, delete, and command execution controls are visible risk settings, so local automation stays bounded to the project you choose.</p>
+      </div>
+      <ul>
+        <li>Model allowlist for file-capable agents</li>
+        <li>Folder allowlist for approved workspaces</li>
+        <li>Packaged smoke test verified workspace-limited file creation</li>
+      </ul>
     </section>
 
     <section class="section" id="features">
