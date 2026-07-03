@@ -3,46 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HAICHI | Self-hosted multi-agent orchestration</title>
-  <meta name="description" content="HAICHI v1.1.0 runs a private AI team on your Windows PC with local Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions.">
+  <title>HAICHI v1.1.0 | Local AI Agents for Windows and Ollama</title>
+  <meta name="description" content="Run local AI agents on Windows with HAICHI v1.1.0. Orchestrate Ollama and optional cloud models through agents, plans, discussions, pipelines, and workspace-scoped file permissions.">
   <meta name="google-site-verification" content="yWgFdJ7h8Sa760NpMlXw9jPENgZUGm8bwr2DKXWKdbU">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#06111f">
   <link rel="canonical" href="https://haichi.app/">
   <link rel="icon" type="image/png" href="haichi-app-logo.png">
   <link rel="apple-touch-icon" href="https://haichi.app/haichi-app-logo.png">
+  <meta name="author" content="HAICHI">
+  <meta name="application-name" content="HAICHI">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="HAICHI">
-  <meta property="og:title" content="HAICHI | Self-hosted multi-agent orchestration">
-  <meta property="og:description" content="HAICHI v1.1.0 runs a private AI team on your Windows PC with local Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions.">
+  <meta property="og:title" content="HAICHI v1.1.0 | Local AI Agents for Windows and Ollama">
+  <meta property="og:description" content="Self-hosted multi-agent orchestration for Windows. Run Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions from your own PC.">
   <meta property="og:url" content="https://haichi.app/">
   <meta property="og:image" content="https://haichi.app/haichi-app-logo.png">
+  <meta property="og:image:alt" content="HAICHI multi-agent orchestration logo">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="HAICHI | Self-hosted multi-agent orchestration">
-  <meta name="twitter:description" content="HAICHI v1.1.0 runs a private AI team on your Windows PC with local Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions.">
+  <meta name="twitter:title" content="HAICHI v1.1.0 | Local AI Agents for Windows and Ollama">
+  <meta name="twitter:description" content="Self-hosted multi-agent orchestration for Windows. Run Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions from your own PC.">
   <meta name="twitter:image" content="https://haichi.app/haichi-app-logo.png">
+  <meta name="twitter:image:alt" content="HAICHI multi-agent orchestration logo">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-  {
+  [{
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": "https://haichi.app/#software",
     "name": "HAICHI",
+    "alternateName": "Project HAICHI",
     "url": "https://haichi.app/",
     "image": "https://haichi.app/haichi-app-logo.png",
     "applicationCategory": "DeveloperApplication",
+    "applicationSubCategory": "AI agent orchestration",
     "operatingSystem": "Windows 10, Windows 11",
     "softwareVersion": "1.1.0",
-    "description": "Self-hosted multi-agent orchestration for local and cloud AI models.",
+    "description": "Self-hosted multi-agent orchestration for Windows, local Ollama models, optional cloud AI providers, workflows, and workspace-scoped file permissions.",
+    "featureList": [
+      "Local Ollama model discovery",
+      "Multi-agent chat and workflow orchestration",
+      "Plans, discussions, and pipelines",
+      "Workspace-scoped agent file permissions",
+      "Optional OpenAI, Anthropic, Gemini, and GitHub Models providers",
+      "Private Tailscale remote access in Developer Pro"
+    ],
     "downloadUrl": "https://haichi.app/#download",
-    "offers": {
-      "@type": "Offer",
-      "name": "HAICHI Personal",
-      "url": "https://haichi.app/#pricing",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
-  }
+    "softwareRequirements": "Windows 10 or Windows 11. Ollama recommended for local models.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "HAICHI Personal",
+        "url": "https://haichi.lemonsqueezy.com/checkout/buy/719fddae-0c70-4f2d-9127-0a2222c418ca",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "HAICHI Developer Pro",
+        "url": "https://haichi.lemonsqueezy.com/checkout/buy/80cf9d56-652b-4b5e-baf9-1cf53c7b4eab",
+        "price": "49",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://haichi.app/#faq-schema",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does HAICHI require paid AI APIs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. HAICHI can run entirely with local Ollama models. Cloud providers are optional and billed separately by those providers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will HAICHI work with an 8 GB GPU?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The default setup limits local inference to two concurrent agents and can reduce concurrency after a timeout or memory failure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can agents modify my files?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only when you explicitly enable workspace-scoped permissions for selected models and folders. Write, delete, and command execution controls are marked as risk controls and start disabled."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is HAICHI a hosted SaaS product?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. HAICHI v1.1 is a self-hosted Windows product built for a single trusted workstation."
+        }
+      }
+    ]
+  }]
   </script>
 </head>
 <body>
