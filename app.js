@@ -37,16 +37,18 @@ document.querySelectorAll('.faq-list details').forEach(item => {
   });
 });
 
-document.querySelector('.copy-install').addEventListener('click', async event => {
-  const command = event.currentTarget.dataset.command;
-  try {
-    await navigator.clipboard.writeText(command);
-    toast.textContent = 'Install command copied';
-  } catch {
-    toast.textContent = `Install command: ${command}`;
-  }
-  toast.classList.add('show');
-  window.setTimeout(() => toast.classList.remove('show'), 2200);
+document.querySelectorAll('.copy-install').forEach(btn => {
+  btn.addEventListener('click', async event => {
+    const command = event.currentTarget.dataset.command;
+    try {
+      await navigator.clipboard.writeText(command);
+      toast.textContent = 'Install command copied';
+    } catch {
+      toast.textContent = `Install command: ${command}`;
+    }
+    toast.classList.add('show');
+    window.setTimeout(() => toast.classList.remove('show'), 2200);
+  });
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();

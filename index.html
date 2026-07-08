@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HAICHI v1.1.0 | Local AI Agents for Windows and Ollama</title>
-  <meta name="description" content="Run local AI agents on Windows with HAICHI v1.1.0. Orchestrate Ollama and optional cloud models through agents, plans, discussions, pipelines, and workspace-scoped file permissions.">
+  <title>HAICHI v1.1.0 | Local AI Agents for Windows, Linux and Ollama</title>
+  <meta name="description" content="Run local AI agents on Windows and Linux with HAICHI v1.1.0. Orchestrate Ollama and optional cloud models through agents, plans, discussions, pipelines, and workspace-scoped file permissions.">
   <meta name="google-site-verification" content="yWgFdJ7h8Sa760NpMlXw9jPENgZUGm8bwr2DKXWKdbU">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#06111f">
@@ -16,8 +16,8 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="HAICHI">
-  <meta property="og:title" content="HAICHI v1.1.0 | Local AI Agents for Windows and Ollama">
-  <meta property="og:description" content="Self-hosted multi-agent orchestration for Windows. Run Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions from your own PC.">
+  <meta property="og:title" content="HAICHI v1.1.0 | Local AI Agents for Windows, Linux and Ollama">
+  <meta property="og:description" content="Self-hosted multi-agent orchestration for Windows and Linux. Run Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions from your own PC.">
   <meta property="og:url" content="https://haichi.app/">
   <meta property="og:image" content="https://haichi.app/haichi-app-logo.png">
   <meta property="og:image:alt" content="HAICHI multi-agent orchestration logo">
@@ -38,9 +38,9 @@
     "image": "https://haichi.app/haichi-app-logo.png",
     "applicationCategory": "DeveloperApplication",
     "applicationSubCategory": "AI agent orchestration",
-    "operatingSystem": "Windows 10, Windows 11",
+    "operatingSystem": "Windows 10, Windows 11, Linux",
     "softwareVersion": "1.1.0",
-    "description": "Self-hosted multi-agent orchestration for Windows, local Ollama models, optional cloud AI providers, workflows, and workspace-scoped file permissions.",
+    "description": "Self-hosted multi-agent orchestration for Windows and Linux, local Ollama models, optional cloud AI providers, workflows, and workspace-scoped file permissions.",
     "featureList": [
       "Local Ollama model discovery",
       "Multi-agent chat and workflow orchestration",
@@ -50,7 +50,7 @@
       "Private Tailscale remote access in Developer Pro"
     ],
     "downloadUrl": "https://haichi.app/#download",
-    "softwareRequirements": "Windows 10 or Windows 11. Ollama recommended for local models.",
+    "softwareRequirements": "Windows 10/11 or modern Linux. Ollama recommended for local models.",
     "offers": [
       {
         "@type": "Offer",
@@ -135,9 +135,9 @@
       <div class="hero-copy">
         <p class="eyebrow"><span></span> HAICHI v1.1.0 is live</p>
         <h1>Run a private AI team on your own PC.</h1>
-        <p class="hero-lead">HAICHI connects local Ollama models and optional cloud providers into one controllable Windows workspace for agents, plans, discussions, repeatable pipelines, and bounded file access.</p>
+        <p class="hero-lead">HAICHI connects local Ollama models and optional cloud providers into one controllable workspace for agents, plans, discussions, repeatable pipelines, and bounded file access.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#download">Get HAICHI for Windows</a>
+          <a class="button primary" href="#download">Download HAICHI</a>
           <a class="button secondary" href="#workflow">See how it works</a>
         </div>
         <p class="hero-note">Local-first. Cloud-ready. Workspace permissions are explicit and off by default.</p>
@@ -294,15 +294,18 @@
 
     <section class="download-section" id="download">
       <div>
-        <p class="eyebrow">Windows release</p>
+        <p class="eyebrow">Cross-platform release</p>
         <h2>Put your AI team on your own hardware.</h2>
-        <p>Requires Windows 10 or 11. Ollama is recommended for local models. Tailscale is optional for private remote access. Current v1.1.0 packages passed 137 automated checks with packaged plugin and workspace permission verification.</p>
+        <p>Supports Windows and Linux. Ollama is recommended for local models. Tailscale is optional for private remote access. Current v1.1.0 packages passed 137 automated checks with packaged plugin and workspace permission verification.</p>
       </div>
       <div class="download-actions">
         <a class="button primary" href="https://haichi.lemonsqueezy.com/checkout/buy/80cf9d56-652b-4b5e-baf9-1cf53c7b4eab">Buy Developer Pro (€49)</a>
         <a class="button secondary" href="https://haichi.lemonsqueezy.com/checkout/buy/719fddae-0c70-4f2d-9127-0a2222c418ca">Download Personal (Free)</a>
-        <button class="button secondary copy-install" type="button" data-command="install.bat">Copy install command</button>
-        <small>Self-hosted Windows x64</small>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; width: 100%;">
+          <button class="button secondary copy-install" type="button" data-command="install.bat">Copy Windows install</button>
+          <button class="button secondary copy-install" type="button" data-command="chmod +x install.sh && ./install.sh">Copy Linux install</button>
+        </div>
+        <small>Self-hosted Windows x64 / Linux x64</small>
       </div>
     </section>
   </main>
