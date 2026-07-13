@@ -1,0 +1,50 @@
+name: Early user feedback
+description: Tell us what blocked your first HAICHI workflow.
+title: "First workflow feedback: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying HAICHI. Short answers are enough. Do not include API keys, passwords, license keys, or private project files.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows x64
+        - Linux x64
+        - I did not reach installation
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Where did you stop?
+      options:
+        - Download or delivery
+        - Installation
+        - Ollama connection
+        - Creating or assigning agents
+        - Running a plan, discussion, or pipeline
+        - Workspace file permissions
+        - I completed a workflow
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What were you trying to do?
+      placeholder: One sentence is enough.
+    validations:
+      required: true
+  - type: textarea
+    id: blocker
+    attributes:
+      label: What felt confusing, unnecessary, or broken?
+      placeholder: Include an error message only if it contains no secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: keep
+    attributes:
+      label: What would make you use HAICHI again?
