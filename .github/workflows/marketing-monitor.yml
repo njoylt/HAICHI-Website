@@ -1,0 +1,66 @@
+name: HAICHI marketing monitor
+
+on:
+  schedule:
+    - cron: "17 6,18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: haichi-marketing-monitor
+  cancel-in-progress: true
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the site repository
+        uses: actions/checkout@v4
+
+      - name: Test monitor decisions
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Collect public campaign signals
+        id: monitor
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/marketing_monitor.py \
+            --summary marketing-monitor-summary.md \
+            --json marketing-monitor.json \
+            --github-output "$GITHUB_OUTPUT"
+          cat marketing-monitor-summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create or reopen a decision issue
+        if: steps.monitor.outputs.alert != 'none'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_TITLE: ${{ steps.monitor.outputs.title }}
+        run: |
+          issue_number="$(gh issue list \
+            --repo "$GITHUB_REPOSITORY" \
+            --state all \
+            --search "\"$ALERT_TITLE\" in:title" \
+            --json number,title \
+            --jq '.[] | select(.title == env.ALERT_TITLE) | .number' \
+            | head -n 1)"
+
+          if [ -z "$issue_number" ]; then
+            gh issue create \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "$ALERT_TITLE" \
+              --body-file marketing-monitor-summary.md
+            exit 0
+          fi
+
+          state="$(gh issue view "$issue_number" --repo "$GITHUB_REPOSITORY" --json state --jq .state)"
+          if [ "$state" = "CLOSED" ]; then
+            gh issue reopen "$issue_number" --repo "$GITHUB_REPOSITORY"
+            gh issue comment "$issue_number" \
+              --repo "$GITHUB_REPOSITORY" \
+              --body-file marketing-monitor-summary.md
+          fi
