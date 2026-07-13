@@ -40,6 +40,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ALERT_TITLE: ${{ steps.monitor.outputs.title }}
+          ALERT_ASSIGNEE: ${{ github.repository_owner }}
         run: |
           issue_number="$(gh issue list \
             --repo "$GITHUB_REPOSITORY" \
@@ -53,6 +54,7 @@ jobs:
             gh issue create \
               --repo "$GITHUB_REPOSITORY" \
               --title "$ALERT_TITLE" \
+              --assignee "$ALERT_ASSIGNEE" \
               --body-file marketing-monitor-summary.md
             exit 0
           fi
