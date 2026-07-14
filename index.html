@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HAICHI v1.1.0 | Local AI Agents for Windows, Linux and Ollama</title>
-  <meta name="description" content="Run local AI agents on Windows and Linux with HAICHI v1.1.0. Orchestrate Ollama and optional cloud models through agents, plans, discussions, pipelines, and workspace-scoped file permissions.">
+  <title>HAICHI | One Local Workflow for Ollama Agents</title>
+  <meta name="description" content="I built HAICHI to replace scattered Ollama tabs, terminals, scripts, and agent chats with one inspectable local workflow. Personal is free with no activation.">
   <meta name="google-site-verification" content="yWgFdJ7h8Sa760NpMlXw9jPENgZUGm8bwr2DKXWKdbU">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#06111f">
@@ -16,16 +16,16 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="HAICHI">
-  <meta property="og:title" content="HAICHI v1.1.0 | Local AI Agents for Windows, Linux and Ollama">
-  <meta property="og:description" content="Self-hosted multi-agent orchestration for Windows and Linux. Run Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions from your own PC.">
+  <meta property="og:title" content="HAICHI | Keep Local Agent Work in One Workflow">
+  <meta property="og:description" content="Assign work, run a plan, and inspect what happened without juggling disconnected local-agent tools.">
   <meta property="og:url" content="https://haichi.app/">
-  <meta property="og:image" content="https://haichi.app/haichi-app-logo.png">
-  <meta property="og:image:alt" content="HAICHI multi-agent orchestration logo">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="HAICHI v1.1.0 | Local AI Agents for Windows and Ollama">
-  <meta name="twitter:description" content="Self-hosted multi-agent orchestration for Windows. Run Ollama agents, optional cloud models, workflows, and workspace-scoped file permissions from your own PC.">
-  <meta name="twitter:image" content="https://haichi.app/haichi-app-logo.png">
-  <meta name="twitter:image:alt" content="HAICHI multi-agent orchestration logo">
+  <meta property="og:image" content="https://haichi.app/haichi-product-overview.png">
+  <meta property="og:image:alt" content="HAICHI Command Center showing two local agents and an inspectable workflow">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HAICHI | Keep Local Agent Work in One Workflow">
+  <meta name="twitter:description" content="Assign work, run a plan, and inspect what happened without juggling disconnected local-agent tools.">
+  <meta name="twitter:image" content="https://haichi.app/haichi-product-overview.png">
+  <meta name="twitter:image:alt" content="HAICHI Command Center showing two local agents and an inspectable workflow">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   [{
@@ -35,12 +35,12 @@
     "name": "HAICHI",
     "alternateName": "Project HAICHI",
     "url": "https://haichi.app/",
-    "image": "https://haichi.app/haichi-app-logo.png",
+    "image": "https://haichi.app/haichi-product-overview.png",
     "applicationCategory": "DeveloperApplication",
     "applicationSubCategory": "AI agent orchestration",
     "operatingSystem": "Windows 10, Windows 11, Linux",
     "softwareVersion": "1.1.0",
-    "description": "Self-hosted multi-agent orchestration for Windows and Linux, local Ollama models, optional cloud AI providers, workflows, and workspace-scoped file permissions.",
+    "description": "A local Windows and Linux workspace that replaces scattered Ollama tabs, terminals, scripts, and agent chats with one inspectable workflow.",
     "featureList": [
       "Local Ollama model discovery",
       "Multi-agent chat and workflow orchestration",
@@ -85,10 +85,10 @@
       },
       {
         "@type": "Question",
-        "name": "Will HAICHI work with an 8 GB GPU?",
+        "name": "Are Personal and Pro separate downloads?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. The default setup limits local inference to two concurrent agents and can reduce concurrency after a timeout or memory failure."
+          "text": "Yes. Personal is the free local build with no activation. Developer Pro is a separate licensed build with optional cloud providers and private Tailscale access."
         }
       },
       {
@@ -116,7 +116,7 @@
   <header class="site-header">
     <a class="brand" href="#top" aria-label="HAICHI home">
       <img src="haichi-app-logo.png" alt="" class="brand-logo" aria-hidden="true">
-      <span><strong>HAICHI</strong><small>Multi-Agent Orchestration</small></span>
+      <span><strong>HAICHI</strong><small>Local agent workspace</small></span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" aria-label="Primary navigation">
@@ -133,59 +133,54 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> Free Personal build for Windows + Linux</p>
-        <h1>HAICHI: two local AI agents, one workspace.</h1>
-        <p class="hero-lead">Stop juggling Ollama tabs, terminals, and separate agent chats. Run two local agents, plans, discussions, and repeatable workflows from one private control room on your own machine.</p>
+        <p class="eyebrow"><span></span> Built for people already using Ollama</p>
+        <h1>HAICHI turns scattered local agent tools into one workflow.</h1>
+        <p class="hero-lead">I built HAICHI because using local agents meant juggling Ollama tabs, terminals, scripts, and disconnected chats. Assign the work, run a plan, and inspect what happened from one local workspace.</p>
         <div class="hero-actions">
-          <a class="button primary" href="https://haichi.lemonsqueezy.com/checkout/buy/719fddae-0c70-4f2d-9127-0a2222c418ca">Get Personal Free</a>
-          <a class="button secondary" href="#workflow">See how it works</a>
+          <a class="button primary" href="https://haichi.lemonsqueezy.com/checkout/buy/719fddae-0c70-4f2d-9127-0a2222c418ca">Download Personal - free</a>
+          <a class="button secondary" href="#product-proof">See the real workspace</a>
         </div>
-        <p class="hero-note">No activation · Local Ollama · Up to 2 agents · 1 active workflow</p>
+        <p class="hero-note">No activation &middot; Windows and Linux &middot; Local Ollama &middot; Up to 2 agents</p>
       </div>
 
-      <aside class="architecture-card" aria-label="HAICHI system architecture">
-        <p class="architecture-label">Inside HAICHI v1.1</p>
-        <h2>One runtime. Clear boundaries.</h2>
-        <div class="architecture-row"><span>Local intelligence</span><strong>Ollama models</strong><small>Private inference with bounded GPU concurrency</small></div>
-        <div class="architecture-row"><span>Optional expansion</span><strong>4 cloud providers</strong><small>OpenAI, Anthropic, Gemini, and GitHub Models</small></div>
-        <div class="architecture-row"><span>Orchestration</span><strong>Agents and workflows</strong><small>Channels, plans, discussions, and pipelines</small></div>
-        <div class="architecture-row"><span>Persistence</span><strong>Local SQLite</strong><small>Plans, memory, events, and conversation state</small></div>
-        <div class="architecture-footer"><span><i></i> v1.1.0 release verified</span><strong>143 tests</strong></div>
-      </aside>
+      <figure class="product-visual" id="product-proof">
+        <img src="haichi-product-overview.png" alt="HAICHI Command Center with two local agents, active plans, and a visible agent mesh" width="1280" height="720">
+        <figcaption><strong>A real HAICHI workspace.</strong> Two local agents, one visible workflow, and status you can inspect.</figcaption>
+      </figure>
     </section>
 
     <section class="proof" aria-label="Product verification">
-      <div><strong>143</strong><span>automated tests</span></div>
-      <div><strong>4</strong><span>cloud providers</span></div>
-      <div><strong>Safe</strong><span>workspace-bound tools</span></div>
-      <div><strong>2</strong><span>Windows + Linux builds</span></div>
+      <div><strong>168</strong><span>release checks</span></div>
+      <div><strong>4</strong><span>verified release builds</span></div>
+      <div><strong>Free</strong><span>Personal, no activation</span></div>
+      <div><strong>Local</strong><span>plans and workspace state</span></div>
     </section>
 
     <section class="release-note" aria-label="Version 1.1 release">
       <div>
-        <p class="eyebrow">New in v1.1.0</p>
-        <h2>Agents can work inside the workspace you approve.</h2>
-        <p>Enable file access only for selected models and selected folders. Read, edit, delete, and command execution controls are visible risk settings, so local automation stays bounded to the project you choose. Stronger coder or cloud models are recommended for file-changing tools.</p>
+        <p class="eyebrow">What the workflow looks like</p>
+        <h2>Give the agents a task. Keep the work visible.</h2>
+        <p>HAICHI does not hide a run behind one chat response. The plan, current state, agent handoffs, retries, and final output stay visible in the same local workspace.</p>
       </div>
       <ul>
-        <li>Model allowlist for file-capable agents</li>
-        <li>Folder allowlist for approved workspaces</li>
-        <li>Packaged smoke test verified workspace-limited file creation</li>
+        <li>Assign a role and model to each agent</li>
+        <li>Run a plan, discussion, or repeatable pipeline</li>
+        <li>Inspect the result before deciding what happens next</li>
       </ul>
     </section>
 
     <section class="section" id="features">
       <div class="section-heading">
-        <p class="eyebrow">One control surface</p>
-        <h2>More than another chat window.</h2>
-        <p>Build a working system of specialized agents, then see what they are doing, which model they use, and where every task stands.</p>
+        <p class="eyebrow">The useful parts in one place</p>
+        <h2>The pieces I kept reaching for.</h2>
+        <p>Models, agent roles, plans, handoffs, and results stay connected instead of being spread across separate tools.</p>
       </div>
       <div class="feature-grid">
-        <article><span>01</span><h3>Local model discovery</h3><p>Detect installed Ollama models, inspect their fit for your hardware, and assign defaults per agent.</p></article>
-        <article><span>02</span><h3>Single or multiple agents</h3><p>Send work to one agent or dispatch several independent responses concurrently with bounded GPU usage.</p></article>
+        <article><span>01</span><h3>Local model discovery</h3><p>Find installed Ollama models and assign a default model to each agent.</p></article>
+        <article><span>02</span><h3>Agent roles</h3><p>Give each agent a focused role, prompt, model, and set of allowed capabilities.</p></article>
         <article><span>03</span><h3>Plans and pipelines</h3><p>Run parallel plan tasks, retry incomplete work, or pass output through a deterministic agent chain.</p></article>
         <article><span>04</span><h3>Structured discussions</h3><p>Let agents challenge and refine an approach turn by turn while keeping each response correlated.</p></article>
-        <article><span>05</span><h3>Optional cloud models</h3><p>Connect OpenAI, Anthropic, Gemini, or GitHub Models without making cloud access mandatory.</p></article>
+        <article><span>05</span><h3>Optional providers in Pro</h3><p>Use local Ollama by default or connect supported cloud providers in the separate Pro build.</p></article>
         <article><span>06</span><h3>Workspace file permissions</h3><p>Let selected models read or edit files only inside the workspace folders you approve.</p></article>
       </div>
     </section>
@@ -193,21 +188,21 @@
     <section class="section workflow-section" id="workflow">
       <div class="section-heading">
         <p class="eyebrow">A clear operating loop</p>
-        <h2>Configure once. Coordinate repeatedly.</h2>
+        <h2>From a task to an inspectable result.</h2>
       </div>
       <ol class="workflow">
         <li><span>1</span><div><h3>Connect models</h3><p>Use Ollama locally or add an optional provider key from Settings. HAICHI discovers the available model list.</p></div></li>
         <li><span>2</span><div><h3>Assign agents</h3><p>Give each agent a role, system prompt, provider, model, and carefully scoped capabilities.</p></div></li>
-        <li><span>3</span><div><h3>Run the workflow</h3><p>Choose a channel, plan, discussion, or pipeline and override models only when the task needs it.</p></div></li>
-        <li><span>4</span><div><h3>Inspect and recover</h3><p>Review events and results, cancel active work, retry failures, and retain completed plan tasks.</p></div></li>
+        <li><span>3</span><div><h3>Run the work</h3><p>Choose a plan, discussion, or pipeline and keep the task connected to its agent output.</p></div></li>
+        <li><span>4</span><div><h3>Inspect what happened</h3><p>Review events and results, cancel active work, and retry incomplete tasks without losing the thread.</p></div></li>
       </ol>
     </section>
 
     <section class="section security-section" id="security">
       <div class="security-copy">
-        <p class="eyebrow">Private by default</p>
-        <h2>Your orchestration layer stays on your machine.</h2>
-        <p>HAICHI is designed for a trusted Windows or Linux workstation, not a public multi-tenant SaaS. Localhost stays convenient while Developer Pro can add password-protected Tailscale access.</p>
+        <p class="eyebrow">Local by default</p>
+        <h2>The control surface stays on your machine.</h2>
+        <p>HAICHI is built for a trusted Windows or Linux workstation, not a public multi-tenant service. Developer Pro can add password-protected Tailscale access when you need a private remote connection.</p>
         <ul>
           <li>Dangerous agent tools are disabled by default.</li>
           <li>Agent file access is opt-in, model-scoped, and workspace-bound.</li>
@@ -226,16 +221,16 @@
 
     <section class="section pricing-section" id="pricing">
       <div class="section-heading">
-        <p class="eyebrow">Fair and simple plans</p>
-        <h2>Choose the edition that fits your workflow.</h2>
-        <p>Run locally for free, or unlock cloud providers and private remote access with Developer Pro.</p>
+        <p class="eyebrow">Personal and Pro are separate builds</p>
+        <h2>Start with the free local build.</h2>
+        <p>Personal covers the core local workflow. Developer Pro is a separate licensed build for optional providers, more agents, and private remote access.</p>
       </div>
       <div class="pricing-grid">
         <article class="pricing-card featured">
-          <div class="card-badge">Free to start</div>
+          <div class="card-badge">No activation</div>
           <h3>Personal</h3>
-          <p class="price">€0<span>/ forever</span></p>
-          <p class="price-desc">Great for getting started with private, local-first AI orchestration.</p>
+          <p class="price">&euro;0<span>/ personal use</span></p>
+          <p class="price-desc">The free build for running a focused local workflow with Ollama.</p>
           <hr>
           <ul>
             <li>Local Ollama model discovery</li>
@@ -245,12 +240,12 @@
             <li>Plans, discussions, and pipelines</li>
             <li>Personal, non-commercial use</li>
           </ul>
-          <a class="button primary" href="https://haichi.lemonsqueezy.com/checkout/buy/719fddae-0c70-4f2d-9127-0a2222c418ca">Get Personal Free</a>
+          <a class="button primary" href="https://haichi.lemonsqueezy.com/checkout/buy/719fddae-0c70-4f2d-9127-0a2222c418ca">Download Personal - free</a>
         </article>
         <article class="pricing-card">
           <h3>Developer Pro</h3>
-          <p class="price">€49<span>/ one-time</span></p>
-          <p class="price-desc">For developers who need maximum flexibility and cloud capabilities.</p>
+          <p class="price">&euro;49<span>/ one-time</span></p>
+          <p class="price-desc">The separate licensed build for broader workflows and optional providers.</p>
           <hr>
           <ul>
             <li><strong>Everything in Personal</strong></li>
@@ -259,21 +254,7 @@
             <li>Private Tailscale remote access</li>
             <li>Perpetual use of HAICHI v1.x</li>
           </ul>
-          <a class="button secondary" href="https://haichi.lemonsqueezy.com/checkout/buy/80cf9d56-652b-4b5e-baf9-1cf53c7b4eab">Buy Developer Pro</a>
-        </article>
-        <article class="pricing-card">
-          <h3>Business</h3>
-          <p class="price">Later</p>
-          <p class="price-desc">Team and organization licensing is planned after the v1.x desktop release stabilizes.</p>
-          <hr>
-          <ul>
-            <li>Multi-seat licensing</li>
-            <li>Centralized deployment notes</li>
-            <li>Internal policy templates</li>
-            <li>No custom fulfilment on Lemon Squeezy</li>
-            <li>No guaranteed support SLA in v1.x</li>
-          </ul>
-          <a class="button secondary" href="#download">Use Developer Pro</a>
+          <a class="button secondary" href="https://haichi.lemonsqueezy.com/checkout/buy/80cf9d56-652b-4b5e-baf9-1cf53c7b4eab">Get Developer Pro</a>
         </article>
       </div>
     </section>
@@ -285,7 +266,7 @@
       </div>
       <div class="faq-list">
         <details><summary>Does HAICHI require paid AI APIs?</summary><p>No. HAICHI can run entirely with local Ollama models. Cloud providers are optional and billed separately by those providers.</p></details>
-        <details><summary>Will it work with an 8 GB GPU?</summary><p>Yes. The default setup limits local inference to two concurrent agents and can reduce concurrency after a timeout or memory failure.</p></details>
+        <details><summary>Are Personal and Pro separate downloads?</summary><p>Yes. Personal is the free local build with no activation. Developer Pro is a separate licensed build with optional providers, more agents, and private Tailscale access.</p></details>
         <details><summary>Can I access it from my phone?</summary><p>Yes with Developer Pro. Run HAICHI in Tailscale mode with a unique remote password, then open the private Tailscale address from your phone.</p></details>
         <details><summary>Can agents modify my files?</summary><p>Only when you explicitly enable workspace-scoped permissions for selected models and folders. Write, delete, and command execution controls are marked as risk controls and start disabled. Tool reliability depends on the selected model following structured instructions, so stronger coder or cloud models are recommended for file-changing actions.</p></details>
         <details><summary>Is this a hosted SaaS product?</summary><p>No. HAICHI v1.1 is a self-hosted Windows and Linux product built for a single trusted workstation.</p></details>
@@ -294,26 +275,26 @@
 
     <section class="download-section" id="download">
       <div>
-        <p class="eyebrow">Looking for the first 3 Ollama users</p>
-        <h2>Run one real workflow. Tell us where it breaks.</h2>
-        <p>Personal is free with no activation and includes up to two local agents plus one active workflow on Windows or Linux. Try a real task, then use the feedback link if download, setup, model discovery, or the workflow blocks you.</p>
+        <p class="eyebrow">I am looking for useful feedback</p>
+        <h2>Try HAICHI on one task you already do.</h2>
+        <p>Personal is free with no activation and includes up to two local agents plus one active workflow. If download, setup, model discovery, or the workflow gets in your way, tell me exactly where.</p>
       </div>
       <div class="download-actions">
-        <a class="button primary" href="https://haichi.lemonsqueezy.com/checkout/buy/719fddae-0c70-4f2d-9127-0a2222c418ca">Get Personal Free</a>
-        <a class="button secondary" href="https://haichi.lemonsqueezy.com/checkout/buy/80cf9d56-652b-4b5e-baf9-1cf53c7b4eab">Buy Developer Pro (€49)</a>
+        <a class="button primary" href="https://haichi.lemonsqueezy.com/checkout/buy/719fddae-0c70-4f2d-9127-0a2222c418ca">Download Personal - free</a>
+        <a class="button secondary" href="https://haichi.lemonsqueezy.com/checkout/buy/80cf9d56-652b-4b5e-baf9-1cf53c7b4eab">Get Developer Pro (&euro;49)</a>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; width: 100%;">
           <button class="button secondary copy-install" type="button" data-command="install.bat">Copy Windows install</button>
           <button class="button secondary copy-install" type="button" data-command="chmod +x install.sh && ./install.sh">Copy Linux install</button>
         </div>
-        <a class="button secondary" href="https://github.com/njoylt/HAICHI-Website/issues/new?template=early-user-feedback.yml">Tell us what blocked you</a>
+        <a class="button secondary" href="https://github.com/njoylt/HAICHI-Website/issues/new?template=early-user-feedback.yml">Tell me what blocked you</a>
         <small>Email delivery through Lemon Squeezy. No payment required for Personal.</small>
       </div>
     </section>
   </main>
 
   <footer>
-    <a class="brand footer-brand" href="#top"><img src="haichi-app-logo.png" alt="" class="brand-logo" aria-hidden="true"><span><strong>HAICHI</strong><small>Collaborate. Plan. Execute. Verify.</small></span></a>
-    <p>Self-hosted multi-agent orchestration. <span id="year"></span></p>
+    <a class="brand footer-brand" href="#top"><img src="haichi-app-logo.png" alt="" class="brand-logo" aria-hidden="true"><span><strong>HAICHI</strong><small>Local agent workspace</small></span></a>
+    <p>Built for local, inspectable agent work. <span id="year"></span></p>
   </footer>
 
   <div class="toast" role="status" aria-live="polite"></div>

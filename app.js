@@ -12,14 +12,14 @@ function attributionValue(value, fallback) {
 const pageParams = new URLSearchParams(window.location.search);
 const checkoutAttribution = {
   source: attributionValue(pageParams.get('utm_source'), 'haichi_site'),
-  campaign: attributionValue(pageParams.get('utm_campaign'), 'first_three_users'),
+  campaign: attributionValue(pageParams.get('utm_campaign'), 'one_local_workflow'),
 };
 
 document.querySelectorAll('a[href^="https://haichi.lemonsqueezy.com/checkout/"]').forEach(link => {
   const checkoutUrl = new URL(link.href);
   checkoutUrl.searchParams.set('checkout[custom][source]', checkoutAttribution.source);
   checkoutUrl.searchParams.set('checkout[custom][campaign]', checkoutAttribution.campaign);
-  checkoutUrl.searchParams.set('checkout[custom][landing_version]', 'v1_1_first_three');
+  checkoutUrl.searchParams.set('checkout[custom][landing_version]', 'v1_1_one_local_workflow');
   link.href = checkoutUrl.toString();
 });
 

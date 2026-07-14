@@ -21,7 +21,7 @@ DEV_API_URL = (
     "i-got-tired-of-juggling-ollama-tabs-terminals-and-agent-chats-glj"
 )
 YOUTUBE_URL = "https://www.youtube.com/watch?v=US1zJvdP2c0"
-CAMPAIGN_STARTED_AT = datetime(2026, 7, 13, 18, 55, 41, tzinfo=timezone.utc)
+CAMPAIGN_STARTED_AT = datetime(2026, 7, 14, 17, 45, 0, tzinfo=timezone.utc)
 USER_AGENT = "HAICHI-Marketing-Monitor/1.0 (+https://haichi.app/)"
 
 ALERT_TITLES = {
