@@ -142,6 +142,22 @@ h1 { font-size:64px;line-height:1.04;letter-spacing:0;margin:0;max-width:980px }
   background: var(--green);
 }
 
+.first-workflow { display:grid;grid-template-columns:.92fr 1.08fr;gap:64px;align-items:center;scroll-margin-top:80px }
+.first-workflow-copy>p:not(.eyebrow) { max-width:640px;color:var(--muted);font-size:16px }
+.first-run-steps { margin:30px 0;padding:0;list-style:none;border-top:1px solid var(--line) }
+.first-run-steps li { display:grid;grid-template-columns:88px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:13px }
+.first-run-steps strong { color:var(--text) }
+.first-run-steps span { color:var(--muted) }
+.starter-task { margin-top:28px;padding:20px;border-left:3px solid var(--green);background:var(--panel) }
+.starter-task>span { display:block;margin-bottom:8px;color:var(--green);font-size:10px;font-weight:800;text-transform:uppercase }
+.starter-task p { margin:0 0 16px;color:var(--text);font-size:13px;line-height:1.65 }
+.starter-task .button { min-height:38px;padding:0 13px;font-size:11px }
+.text-link { display:inline-block;margin-top:20px;color:var(--blue);font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:4px }
+.workflow-proof { margin:0 }
+.workflow-proof img { display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);background:var(--panel) }
+.workflow-proof figcaption { padding:13px 2px 0;color:var(--muted);font-size:12px;line-height:1.6 }
+.workflow-proof figcaption strong { color:var(--text) }
+
 .section { max-width:1180px;margin:0 auto;padding:95px 24px }
 .section-heading { max-width:700px;margin-bottom:42px }.section-heading.compact { margin-bottom:28px }
 h2 { font-size:44px;line-height:1.08;letter-spacing:0;margin:0 0 18px }
@@ -279,7 +295,7 @@ footer { max-width:1180px;margin:0 auto;padding:26px 24px 40px;border-top:1px so
   .site-header { padding:0 18px }.nav-toggle { display:block;margin-left:auto } .theme-toggle { order:4 }
   nav { position:absolute;left:16px;right:16px;top:65px;display:none;flex-direction:column;align-items:stretch;gap:0;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--panel);box-shadow:var(--shadow) } nav.open { display:flex } nav a { padding:12px }
   .hero { padding-top:72px;gap:36px }
-  .feature-grid { grid-template-columns:repeat(2,1fr) }.workflow-section,.security-section { grid-template-columns:1fr;gap:35px }
+  .feature-grid { grid-template-columns:repeat(2,1fr) }.first-workflow,.workflow-section,.security-section { grid-template-columns:1fr;gap:35px }
   .release-note { grid-template-columns:1fr;margin-left:18px;margin-right:18px }
   .pricing-grid { grid-template-columns:1fr;gap:30px }
   .download-section { margin-left:18px;margin-right:18px;flex-direction:column;align-items:flex-start }.download-actions { width:100% }
@@ -290,6 +306,7 @@ footer { max-width:1180px;margin:0 auto;padding:26px 24px 40px;border-top:1px so
   .hero { min-height:0;padding:54px 18px 42px }.hero-lead { font-size:16px }.hero-actions .button { width:100% }
   h1 { font-size:40px }
   h2,.release-note h2 { font-size:32px }
+  .first-run-steps li { grid-template-columns:72px 1fr }
   .product-visual figcaption { display:block;line-height:1.6 }
   .proof { grid-template-columns:repeat(2,1fr);padding:0 18px }.proof div,.proof div:first-child,.proof div:last-child { border:1px solid var(--line);border-radius:0 }
   .section { padding:72px 18px }.feature-grid { grid-template-columns:1fr }.feature-grid article { min-height:190px }.feature-grid h3 { margin-top:28px }

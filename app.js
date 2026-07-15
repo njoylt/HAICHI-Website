@@ -19,7 +19,7 @@ document.querySelectorAll('a[href^="https://haichi.lemonsqueezy.com/checkout/"]'
   const checkoutUrl = new URL(link.href);
   checkoutUrl.searchParams.set('checkout[custom][source]', checkoutAttribution.source);
   checkoutUrl.searchParams.set('checkout[custom][campaign]', checkoutAttribution.campaign);
-  checkoutUrl.searchParams.set('checkout[custom][landing_version]', 'v1_1_one_local_workflow');
+  checkoutUrl.searchParams.set('checkout[custom][landing_version]', 'v1_1_reviewer_verifier');
   link.href = checkoutUrl.toString();
 });
 
@@ -56,14 +56,15 @@ document.querySelectorAll('.faq-list details').forEach(item => {
   });
 });
 
-document.querySelectorAll('.copy-install').forEach(btn => {
+document.querySelectorAll('.copy-workflow').forEach(btn => {
   btn.addEventListener('click', async event => {
-    const command = event.currentTarget.dataset.command;
+    const target = document.querySelector(event.currentTarget.dataset.copyTarget);
+    const text = target?.textContent?.trim() || '';
     try {
-      await navigator.clipboard.writeText(command);
-      toast.textContent = 'Install command copied';
+      await navigator.clipboard.writeText(text);
+      toast.textContent = 'Starter task copied';
     } catch {
-      toast.textContent = `Install command: ${command}`;
+      toast.textContent = 'Select and copy the starter task above';
     }
     toast.classList.add('show');
     window.setTimeout(() => toast.classList.remove('show'), 2200);
