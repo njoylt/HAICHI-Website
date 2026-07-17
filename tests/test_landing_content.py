@@ -22,13 +22,18 @@ class LandingContentTests(unittest.TestCase):
         self.assertIn("80cf9d56-652b-4b5e-baf9-1cf53c7b4eab", self.html)
         self.assertIn("Personal and Pro are separate builds", self.html)
 
+    def test_founder_offer_is_present_without_replacing_public_price(self):
+        self.assertIn("Founder test", self.html)
+        self.assertIn("&euro;29 for the first 10 useful Pro users.", self.html)
+        self.assertIn("Get Developer Pro (&euro;49)", self.html)
+
     def test_download_section_does_not_copy_contextless_install_commands(self):
         self.assertNotIn("copy-install", self.html)
         self.assertNotIn("copy-install", self.script)
         self.assertNotIn("data-command=", self.html)
 
     def test_checkout_uses_new_landing_attribution(self):
-        self.assertIn("v1_1_reviewer_verifier", self.script)
+        self.assertIn("v1_1_founder_offer", self.script)
 
 
 if __name__ == "__main__":

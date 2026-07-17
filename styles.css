@@ -194,6 +194,35 @@ footer { max-width:1180px;margin:0 auto;padding:26px 24px 40px;border-top:1px so
 .toast { position:fixed;left:50%;bottom:22px;z-index:50;transform:translate(-50%,20px);opacity:0;pointer-events:none;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--text);padding:10px 14px;font-size:12px;box-shadow:var(--shadow);transition:.2s }
 .toast.show { transform:translate(-50%,0);opacity:1 }
 /* Pricing */
+.founder-offer {
+  max-width: 880px;
+  margin: -12px 0 28px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 22px;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--green) 55%, var(--line));
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--panel) 92%, var(--green)), var(--panel));
+  box-shadow: var(--shadow);
+}
+.founder-offer .eyebrow {
+  margin-bottom: 10px;
+  color: var(--green);
+}
+.founder-offer h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.founder-offer p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -297,6 +326,7 @@ footer { max-width:1180px;margin:0 auto;padding:26px 24px 40px;border-top:1px so
   .hero { padding-top:72px;gap:36px }
   .feature-grid { grid-template-columns:repeat(2,1fr) }.first-workflow,.workflow-section,.security-section { grid-template-columns:1fr;gap:35px }
   .release-note { grid-template-columns:1fr;margin-left:18px;margin-right:18px }
+  .founder-offer { grid-template-columns:1fr;align-items:start }
   .pricing-grid { grid-template-columns:1fr;gap:30px }
   .download-section { margin-left:18px;margin-right:18px;flex-direction:column;align-items:flex-start }.download-actions { width:100% }
 }

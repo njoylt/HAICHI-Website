@@ -19,7 +19,7 @@ document.querySelectorAll('a[href^="https://haichi.lemonsqueezy.com/checkout/"]'
   const checkoutUrl = new URL(link.href);
   checkoutUrl.searchParams.set('checkout[custom][source]', checkoutAttribution.source);
   checkoutUrl.searchParams.set('checkout[custom][campaign]', checkoutAttribution.campaign);
-  checkoutUrl.searchParams.set('checkout[custom][landing_version]', 'v1_1_reviewer_verifier');
+  checkoutUrl.searchParams.set('checkout[custom][landing_version]', 'v1_1_founder_offer');
   link.href = checkoutUrl.toString();
 });
 
