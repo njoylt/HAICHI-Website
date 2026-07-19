@@ -30,6 +30,16 @@ body:
         - I completed a workflow
     validations:
       required: true
+  - type: dropdown
+    id: founder_code
+    attributes:
+      label: Are you asking for the €29 founder code?
+      options:
+        - "No"
+        - "Yes, I tried Personal and want to buy Pro"
+        - "Maybe, I want to test the workflow first"
+    validations:
+      required: true
   - type: textarea
     id: goal
     attributes:

@@ -19,9 +19,9 @@ Avoid generic "AI productivity" audiences for the first pass. The offer is too t
 
 - Personal: free local build, no activation.
 - Developer Pro: €49 one-time.
-- Founder test: €29 for the first 10 useful Pro users, issued manually or through a confirmed Lemon Squeezy coupon before purchase.
+- Founder test: €29 for the first 10 useful Pro users through an "ask for founder code" request, issued manually or through a confirmed Lemon Squeezy coupon before purchase.
 
-Do not advertise the €29 founder offer publicly until the coupon/manual checkout path is ready.
+Do not imply an automatic €29 checkout until the coupon/manual checkout path is ready.
 
 ## Core story
 
@@ -45,7 +45,7 @@ The first workflow is simple:
 
 Personal is free. Developer Pro is €49 one-time.
 
-I am looking for the first 10 serious users. If you actually run local agents and want to try Pro, ask for a €29 founder code after trying Personal.
+I am looking for the first 10 serious users. If you actually run local agents and want to try Pro, ask for a €29 founder code after trying Personal. Do not use the normal €49 checkout if you are expecting the founder code.
 
 Download: https://haichi.app
 
@@ -123,7 +123,7 @@ Please send the platform, install step, and exact error without secrets. That is
 
 9. If they want the founder price
 
-Try Personal first. If the workflow is relevant, open the feedback link and ask for a founder code before buying Pro. Do not buy the normal €49 checkout if you are expecting the €29 test price.
+Try Personal first. If the workflow is relevant, open the feedback link and ask for a founder code before buying Pro. Do not buy the normal €49 checkout if you are expecting the €29 founder code.
 
 10. If they say "looks too early"
 
