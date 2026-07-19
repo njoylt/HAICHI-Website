@@ -20,15 +20,17 @@ class LandingContentTests(unittest.TestCase):
         self.assertIn("Verifier", self.html)
         self.assertIn("Copy starter task", self.html)
 
-    def test_both_editions_keep_separate_checkout_links(self):
-        self.assertIn("719fddae-0c70-4f2d-9127-0a2222c418ca", self.html)
-        self.assertIn("80cf9d56-652b-4b5e-baf9-1cf53c7b4eab", self.html)
+    def test_both_editions_use_request_links_while_checkout_is_verified(self):
+        self.assertNotIn("haichi.lemonsqueezy.com/checkout", self.html)
+        self.assertNotIn("haichi.lemonsqueezy.com/checkout", self.script)
+        self.assertIn("Personal%20download%20request", self.html)
+        self.assertIn("Developer%20Pro%20request", self.html)
         self.assertIn("Personal and Pro are separate builds", self.html)
 
     def test_founder_offer_is_present_without_replacing_public_price(self):
         self.assertIn("Founder test", self.html)
         self.assertIn("&euro;29 for the first 10 useful Pro users.", self.html)
-        self.assertIn("Get Developer Pro (&euro;49)", self.html)
+        self.assertIn("Request Developer Pro (&euro;49)", self.html)
         self.assertIn("Ask for &euro;29 founder code", self.html)
 
     def test_feedback_template_accepts_founder_code_requests(self):
@@ -40,8 +42,8 @@ class LandingContentTests(unittest.TestCase):
         self.assertNotIn("copy-install", self.script)
         self.assertNotIn("data-command=", self.html)
 
-    def test_checkout_uses_new_landing_attribution(self):
-        self.assertIn("v1_1_founder_offer", self.script)
+    def test_temporary_checkout_notice_is_visible(self):
+        self.assertIn("Checkout delivery is being verified", self.html)
 
 
 if __name__ == "__main__":

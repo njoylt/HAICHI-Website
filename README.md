@@ -5,9 +5,11 @@ Static landing page for the HAICHI Windows self-hosted product.
 Preview from the repository root:
 
 ```powershell
-.\.venv\Scripts\python.exe -m http.server 8080
+python -m http.server 8080
 ```
 
-Open `http://127.0.0.1:8080/site/`.
+Open `http://127.0.0.1:8080/`.
 
-Place the current Windows release in `downloads/` for local preview. Before public deployment, replace the local download link in `index.html` with the public release URL and add the production domain as the canonical URL.
+Current production domain: `https://haichi.app`.
+
+Checkout safety note: if Lemon Squeezy checkout URLs return 404, keep public CTAs pointed at the GitHub request/feedback form instead of publishing broken checkout links. Restore checkout links only after live verification.
