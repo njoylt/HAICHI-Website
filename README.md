@@ -12,4 +12,4 @@ Open `http://127.0.0.1:8080/`.
 
 Current production domain: `https://haichi.app`.
 
-Checkout safety note: if Lemon Squeezy checkout URLs return 404, keep public CTAs pointed at the GitHub request/feedback form instead of publishing broken checkout links. Restore checkout links only after live verification.
+Checkout safety note: Lemon Squeezy checkout URLs are currently restored after live verification. If they return 404 again, point public CTAs at the GitHub request/feedback form until the checkout links are fixed.

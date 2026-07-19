@@ -12,11 +12,11 @@ Status: active working runbook
 - Developer Pro: normal public price `€49`.
 - Founder test: `€29` for first 10 useful Pro users via founder-code request.
 
-## Current operational constraint
+## Current operational note
 
-Lemon Squeezy checkout URLs returned `404 Not Found` in link verification. Public CTAs currently route to the GitHub request form instead of broken checkout pages.
+Lemon Squeezy checkout URLs are restored after returning `200 OK` in link verification. Public CTAs point to checkout. Founder-code requests still go through the GitHub request form.
 
-Do not restore checkout links until they pass live verification.
+If checkout links fail again, temporarily route public CTAs to the request form instead of leaving broken checkout pages live.
 
 ## Daily launch loop
 
@@ -55,7 +55,7 @@ Before broader posting:
 - Personal request/download path must work.
 - Pro/founder request path must work.
 - Mobile page must not horizontally overflow.
-- Checkout must not point to 404.
+- Checkout must return non-404 responses.
 - One demo screenshot/GIF should be ready.
 - Owner must approve paid ads or public mass posting.
 

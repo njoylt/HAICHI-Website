@@ -1,13 +1,13 @@
 # HAICHI Link Check Report
 
 Date: 2026-07-19
-Status: action taken
+Status: restored after verification
 
 ## Summary
 
-Live `haichi.app` was reachable and core assets loaded, but both Lemon Squeezy checkout URLs returned `404 Not Found` during direct HTTP verification.
+Live `haichi.app` is reachable, core assets load, and both Lemon Squeezy checkout URLs now return `200 OK` during direct HTTP verification.
 
-To avoid sending first users to broken checkout pages, public CTAs were changed to the GitHub request/feedback form until checkout delivery is restored and verified.
+Public CTAs were restored to Lemon Squeezy checkout. The GitHub request/feedback form remains available for founder-code requests and support.
 
 ## Checked OK
 
@@ -29,29 +29,28 @@ To avoid sending first users to broken checkout pages, public CTAs were changed 
   - `#faq`
   - `#download`
 
-## Failed before fallback
+## Failed before restoration
 
 - Personal Lemon Squeezy checkout: `404 Not Found`
 - Developer Pro Lemon Squeezy checkout: `404 Not Found`
 
-## Current fallback
+## Restored checkout
 
-- Personal download request: GitHub issue form
-- Developer Pro request: GitHub issue form
+- Personal Lemon Squeezy checkout: `200 OK`
+- Developer Pro Lemon Squeezy checkout: `200 OK`
 - Founder code request: GitHub issue form
 
-## Verified after fallback
+## Verified after restoration
 
 - Request/feedback form: `200 OK`
-- Personal download request form: `200 OK`
-- Developer Pro request form: `200 OK`
-- No public `haichi.lemonsqueezy.com/checkout` links remain in `index.html` or `app.js`.
+- Public `haichi.lemonsqueezy.com/checkout` links are present again in `index.html`.
+- Landing attribution is applied in `app.js` with `v1_1_verified_checkout`.
 
-## Restore condition
+## Regression condition
 
-Only restore direct checkout links when:
+Move public CTAs back to request-form fallback if:
 
-1. Personal checkout URL returns a valid non-404 page.
-2. Developer Pro checkout URL returns a valid non-404 page.
-3. A founder discount/manual coupon path is confirmed.
-4. A live smoke check confirms the final links from `https://haichi.app`.
+1. Personal checkout URL returns 404 or fails in live checks.
+2. Developer Pro checkout URL returns 404 or fails in live checks.
+3. Lemon Squeezy delivery breaks.
+4. Founder discount copy implies an automatic discount that is not configured.

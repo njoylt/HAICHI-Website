@@ -21,7 +21,7 @@ Avoid generic "AI productivity" audiences for the first pass. The offer is too t
 - Developer Pro: €49 one-time.
 - Founder test: €29 for the first 10 useful Pro users through an "ask for founder code" request, issued manually or through a confirmed Lemon Squeezy coupon before purchase.
 
-Current checkout fallback: route people through the GitHub request form until Lemon Squeezy checkout links are restored and verified. Do not imply an automatic €29 checkout until the coupon/manual checkout path is ready.
+Checkout is restored through Lemon Squeezy. Do not imply an automatic €29 checkout until the coupon/manual checkout path is ready.
 
 ## Core story
 
@@ -43,11 +43,11 @@ The first workflow is simple:
 2. Verifier challenges weak claims.
 3. You inspect the evidence before changing anything.
 
-Personal is free. Developer Pro is €49 one-time, currently handled through a request form while checkout delivery is verified.
+Personal is free. Developer Pro is €49 one-time.
 
 I am looking for the first 10 serious users. If you actually run local agents and want to try Pro, ask for a €29 founder code after trying Personal. Do not use the normal €49 checkout if you are expecting the founder code.
 
-Request download / founder code: https://haichi.app
+Download / founder code: https://haichi.app
 
 ## Post 2: technical workflow post
 
@@ -67,7 +67,7 @@ Reviewer -> Verifier -> Evidence Ready
 
 The useful part is not "AI magic". It is keeping the plan, roles, output, retries, and evidence in one local workspace.
 
-Personal request link: https://haichi.app
+Personal is free: https://haichi.app
 
 ## Post 3: feedback-first post
 
@@ -83,7 +83,7 @@ You: keep only the evidence-backed fixes.
 
 If install, model setup, or first workflow is confusing, tell me exactly where it breaks.
 
-Personal is free. No activation. Use the request form if the direct download checkout is unavailable.
+Personal is free. No activation.
 
 https://haichi.app
 
