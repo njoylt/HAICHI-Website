@@ -41,7 +41,9 @@ The first workflow is simple:
 
 Personal is free. I am looking for blunt feedback from people already using local models or agents.
 
-If you want to try it, use the request form on `https://haichi.app`.
+If you want to try it, download Personal from `https://haichi.app`.
+
+If the workflow is relevant and you want Pro, ask for the founder code before buying. The normal public Pro checkout is `€49`; do not promise an automatic `€29` checkout unless the founder-code/coupon path is confirmed for that person.
 
 ## Reply checklist
 
