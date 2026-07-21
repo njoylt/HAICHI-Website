@@ -58,13 +58,16 @@ document.querySelectorAll('.faq-list details').forEach(item => {
 
 document.querySelectorAll('.copy-workflow').forEach(btn => {
   btn.addEventListener('click', async event => {
-    const target = document.querySelector(event.currentTarget.dataset.copyTarget);
-    const text = target?.textContent?.trim() || '';
+    const sourceSelector = event.currentTarget.dataset.copyTarget;
+    const target = sourceSelector ? document.querySelector(sourceSelector) : null;
+    const text = event.currentTarget.dataset.copyText || target?.textContent?.trim() || '';
+    const successMessage = event.currentTarget.dataset.copyLabel || 'Text copied';
+    const fallbackMessage = event.currentTarget.dataset.copyFallback || 'Select and copy the text above';
     try {
       await navigator.clipboard.writeText(text);
-      toast.textContent = 'Starter task copied';
+      toast.textContent = successMessage;
     } catch {
-      toast.textContent = 'Select and copy the starter task above';
+      toast.textContent = fallbackMessage;
     }
     toast.classList.add('show');
     window.setTimeout(() => toast.classList.remove('show'), 2200);

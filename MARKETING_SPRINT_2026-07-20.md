@@ -21,6 +21,8 @@ This is not a broad launch. The goal is to learn whether the `Reviewer -> Verifi
 
 Do not imply that `€29` is an automatic public checkout. If someone expects the founder price, tell them to ask first.
 
+Landing-page requirement before outreach: `haichi.app` must show a copyable founder-code request so a serious user can ask by replying/DMing in the current channel without creating a GitHub account. Keep the GitHub form as the structured option, not the only path.
+
 ## Core message
 
 HAICHI is for developers whose local AI work is scattered across Ollama, terminals, scripts, and separate agent chats.
@@ -139,7 +141,7 @@ The product is trying to solve the handoff/evidence problem: roles, retries, dec
 
 ### 6. Founder-code reply
 
-Try Personal first. If the workflow is relevant and you want Pro, ask for a founder code before buying. The normal public checkout is `€49`; the `€29` founder test should be handled manually or through a confirmed coupon path.
+Try Personal first. If the workflow is relevant and you want Pro, copy the founder-code request from `haichi.app` and reply/DM it before buying. The normal public checkout is `€49`; the `€29` founder test should be handled manually or through a confirmed coupon path. If you already use GitHub, the feedback form is the structured option.
 
 ## Measurement
 
@@ -171,4 +173,3 @@ Before any public post:
 2. Recheck the Personal and Pro checkout links do not 404.
 3. Confirm the exact channel and post text with the owner.
 4. Do not schedule, publish, or boost automatically.
-

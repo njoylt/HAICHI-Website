@@ -23,6 +23,8 @@ Avoid generic "AI productivity" audiences for the first pass. The offer is too t
 
 Checkout is restored through Lemon Squeezy. Do not imply an automatic €29 checkout until the coupon/manual checkout path is ready.
 
+Founder-code friction rule: do not force people through GitHub login. Ask them to use the copyable founder-request text on `haichi.app` and send it as a reply/DM in the same channel where they found HAICHI. Use the GitHub feedback form only when they are already signed in or want a structured report.
+
 ## Core story
 
 Use one simple workflow everywhere:
@@ -123,7 +125,7 @@ Please send the platform, install step, and exact error without secrets. That is
 
 9. If they want the founder price
 
-Try Personal first. If the workflow is relevant, open the feedback link and ask for a founder code before buying Pro. Do not buy the normal €49 checkout if you are expecting the €29 founder code.
+Try Personal first. If the workflow is relevant, copy the founder-request text from `haichi.app` and reply/DM it before buying Pro. If you use GitHub, the feedback form works too. Do not buy the normal €49 checkout if you are expecting the €29 founder code.
 
 10. If they say "looks too early"
 

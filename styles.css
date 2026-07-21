@@ -219,11 +219,20 @@ footer { max-width:1180px;margin:0 auto;padding:26px 24px 40px;border-top:1px so
   font-size: 24px;
   line-height: 1.2;
 }
+.founder-offer .founder-help,
 .founder-offer p:last-child {
   margin: 0;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.6;
+}
+.founder-actions {
+  display: grid;
+  gap: 10px;
+  min-width: 210px;
+}
+.founder-actions .button {
+  width: 100%;
 }
 .pricing-grid {
   display: grid;
