@@ -41,7 +41,9 @@ class LandingContentTests(unittest.TestCase):
         self.assertIn("early-user-feedback.yml", self.html)
 
     def test_release_check_count_matches_current_project_suite(self):
-        self.assertIn("<strong>182</strong><span>release checks</span>", self.html)
+        self.assertIn(
+            "<strong>194</strong><span>current source tests</span>", self.html
+        )
 
     def test_feedback_template_accepts_founder_code_requests(self):
         self.assertIn("id: founder_code", self.feedback_template)
