@@ -57,6 +57,21 @@ class LandingContentTests(unittest.TestCase):
     def test_checkout_uses_verified_landing_attribution(self):
         self.assertIn("v1_1_verified_checkout", self.script)
 
+    def test_measurement_tracks_campaign_and_conversion_context(self):
+        for field in ("utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"):
+            self.assertIn(field, self.script)
+        for event in ("page_view", "checkout_click", "product_tour_click", "feedback_form_click"):
+            self.assertIn(event, self.html + self.script)
+        self.assertIn("window.dataLayer", self.script)
+        self.assertIn("haichi:measurement", self.script)
+
+    def test_checkout_receives_edition_and_cta_placement(self):
+        self.assertIn("checkout[custom][edition]", self.script)
+        self.assertIn("checkout[custom][cta_placement]", self.script)
+        self.assertIn('data-edition="personal"', self.html)
+        self.assertIn('data-edition="developer_pro"', self.html)
+        self.assertIn('data-placement="hero"', self.html)
+
     def test_copy_buttons_support_direct_text_and_custom_toasts(self):
         self.assertIn("dataset.copyText", self.script)
         self.assertIn("dataset.copyLabel", self.script)

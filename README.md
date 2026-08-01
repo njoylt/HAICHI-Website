@@ -12,4 +12,20 @@ Open `http://127.0.0.1:8080/`.
 
 Current production domain: `https://haichi.app`.
 
+## Conversion measurement
+
+The landing page emits vendor-neutral, cookieless events to `window.dataLayer`
+and the `haichi:measurement` browser event. Current events include page views,
+Personal/Pro checkout clicks, product-tour clicks, feedback-form clicks, and
+copy actions. No analytics vendor or network collector is enabled by default.
+
+Campaign context comes from `utm_source`, `utm_medium`, `utm_campaign`,
+`utm_content`, and `utm_term`. Checkout links also pass that context, edition,
+CTA placement, and the landing-page version into Lemon Squeezy custom fields so
+completed orders can be attributed without a browser cookie.
+
+For a local event trace, preview the page with `?measurement_debug=1` and inspect
+the browser console. A future analytics adapter can consume `window.dataLayer`
+or listen for `haichi:measurement` without changing the event schema.
+
 Checkout safety note: Lemon Squeezy checkout URLs are currently restored after live verification. If they return 404 again, point public CTAs at the GitHub request/feedback form until the checkout links are fixed.
