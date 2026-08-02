@@ -33,6 +33,8 @@ class LandingContentTests(unittest.TestCase):
         self.assertIn("One agent reviews. The second tries to prove it wrong.", self.html)
         self.assertIn("Reviewer + Verifier for local AI code review", self.html)
         self.assertIn("A local review that earns your trust", self.html)
+        self.assertIn("counter-evidence loop", self.html)
+        self.assertIn("Runs locally in HAICHI.", self.html)
         self.assertIn("Local AI chat is not the same as local agent workflow.", self.html)
         self.assertIn("Try Reviewer + Verifier", self.html)
 

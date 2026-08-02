@@ -76,7 +76,7 @@ nav a:hover, nav a:focus-visible { color:var(--text) }
 
 main { overflow:hidden }
 .hero { min-height:calc(100vh - 70px);max-width:1180px;margin:0 auto;padding:72px 24px 52px;display:grid;grid-template-columns:1fr;align-content:start;gap:42px }
-.hero-review { min-height:auto;max-width:1360px;grid-template-columns:minmax(360px,.82fr) minmax(620px,1.18fr);align-items:center;gap:54px;padding-bottom:34px }
+.hero-review { min-height:auto;max-width:1360px;grid-template-columns:minmax(360px,.78fr) minmax(650px,1.22fr);align-items:center;gap:54px;padding-bottom:34px }
 .hero-copy { max-width:900px;min-width:0;width:100% }
 .hero-review .hero-copy { max-width:560px }
 .eyebrow { color:var(--blue);font-size:11px;font-weight:800;letter-spacing:0;text-transform:uppercase;margin:0 0 18px }
@@ -106,6 +106,111 @@ h1 { font-size:64px;line-height:1.04;letter-spacing:0;margin:0;max-width:980px;t
 .callout.reviewer { top:34%;right:5% }
 .callout.verifier { bottom:22%;right:9%;border-color:color-mix(in srgb,var(--green) 70%,var(--line)) }
 .callout.retry { bottom:14%;left:46%;border-color:color-mix(in srgb,var(--violet) 70%,var(--line)) }
+
+.hero-workflow {
+  position: relative;
+  min-height: 520px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background:
+    linear-gradient(color-mix(in srgb, var(--line) 26%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--line) 26%, transparent) 1px, transparent 1px),
+    color-mix(in srgb, var(--panel) 88%, var(--bg-soft));
+  background-size: 38px 38px;
+  box-shadow: var(--shadow);
+}
+.workflow-stage {
+  position: absolute;
+  z-index: 2;
+  width: 176px;
+  min-height: 154px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--panel) 97%, transparent);
+  box-shadow: 0 18px 46px rgba(9, 34, 55, .15);
+}
+.workflow-stage span {
+  display: inline-flex;
+  margin-bottom: 28px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.workflow-stage strong {
+  display: block;
+  color: var(--text);
+  font-size: 15px;
+}
+.workflow-stage p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.55;
+}
+.stage-task { left: 34px; top: 132px }
+.stage-reviewer { left: 274px; top: 78px }
+.stage-verifier { right: 220px; top: 78px; border-color: color-mix(in srgb, var(--violet) 62%, var(--line)) }
+.stage-result { right: 34px; top: 132px; border-color: color-mix(in srgb, var(--green) 66%, var(--line)) }
+.stage-result span { color: var(--green) }
+.workflow-link {
+  position: absolute;
+  z-index: 1;
+  height: 2px;
+  background: color-mix(in srgb, var(--blue) 72%, var(--line));
+}
+.link-one { left: 210px; top: 210px; width: 82px; transform: rotate(-17deg) }
+.link-two { left: 450px; right: 380px; top: 158px; border-top: 2px dashed color-mix(in srgb, var(--blue) 65%, var(--line)); background: transparent }
+.link-three { right: 178px; top: 210px; width: 64px; transform: rotate(17deg); background: color-mix(in srgb, var(--green) 70%, var(--line)) }
+.counter-loop {
+  position: absolute;
+  z-index: 1;
+  left: 360px;
+  top: 256px;
+  width: 230px;
+  padding-top: 44px;
+  border: 2px dashed color-mix(in srgb, var(--violet) 55%, var(--line));
+  border-top: 0;
+  border-radius: 0 0 18px 18px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 10px;
+  font-weight: 800;
+}
+.workflow-proof-shot {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 24px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.workflow-proof-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 124px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--panel);
+}
+.workflow-proof-shot p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+.workflow-proof-shot strong {
+  color: var(--text);
+}
 
 .review-strip { max-width:1180px;margin:-14px auto 50px;padding:0 24px }
 .review-strip>p { margin:0 0 20px;text-align:center;color:var(--text);font-weight:800 }
@@ -510,6 +615,11 @@ footer { max-width:1180px;margin:0 auto;padding:26px 24px 40px;border-top:1px so
   nav { position:absolute;left:16px;right:16px;top:65px;display:none;flex-direction:column;align-items:stretch;gap:0;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--panel);box-shadow:var(--shadow) } nav.open { display:flex } nav a { padding:12px }
   .hero,.hero-review { padding-top:72px;gap:36px;grid-template-columns:1fr }
   .hero-review .hero-copy { max-width:760px }
+  .hero-workflow { min-height:auto;display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:14px;padding:18px;background-size:32px 32px }
+  .workflow-stage { position:static;width:auto;min-height:0 }
+  .workflow-stage span { margin-bottom:18px }
+  .workflow-link,.counter-loop { display:none }
+  .workflow-proof-shot { position:static;grid-column:1 / -1;grid-template-columns:180px 1fr;margin-top:6px }
   .review-strip ol { grid-template-columns:repeat(2,1fr) }
   .review-strip li:nth-child(2) { border-right:0 }
   .review-strip li:nth-child(-n+2) { border-bottom:1px solid var(--line) }
@@ -531,8 +641,11 @@ footer { max-width:1180px;margin:0 auto;padding:26px 24px 40px;border-top:1px so
   .hero { min-height:0;padding:54px 18px 42px;max-width:100vw }.hero-lead { max-width:100%;font-size:16px }.hero-actions,.hero-actions .button { width:100% }
   h1 { font-size:34px;line-height:1.12;text-wrap:auto }
   .hero-review h1 { font-size:38px }
+  .hero-review .hero-points { display:none }
   .hero-points li { grid-template-columns:1fr;gap:4px }
   .product-callouts { display:none }
+  .hero-workflow { grid-template-columns:1fr;padding:14px }
+  .workflow-proof-shot { grid-template-columns:1fr }
   .review-strip { margin-top:-18px;padding:0 18px 36px }
   .review-strip ol { grid-template-columns:1fr }
   .review-strip li,.review-strip li:nth-child(2) { border-right:0;border-bottom:1px solid var(--line) }

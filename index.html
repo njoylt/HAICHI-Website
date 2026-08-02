@@ -149,15 +149,36 @@
         <p class="hero-note">No activation &middot; Windows and Linux &middot; Local Ollama &middot; Up to 2 agents</p>
       </div>
 
-      <figure class="product-visual hero-product" id="product-proof">
-        <img src="haichi-product-overview.png" alt="HAICHI Command Center with two local agents, active plans, and a visible agent mesh" width="1280" height="720">
-        <div class="product-callouts" aria-label="Product workflow annotations">
-          <span class="callout reviewer">Reviewer checks the change</span>
-          <span class="callout verifier">Verifier challenges weak claims</span>
-          <span class="callout retry">Retry only the weak step</span>
+      <div class="hero-workflow" id="product-proof" aria-label="Reviewer and Verifier workflow preview">
+        <div class="workflow-stage stage-task">
+          <span>Task</span>
+          <strong>Code change</strong>
+          <p>Paste a diff, describe a bug, or scope one local workflow.</p>
         </div>
-        <figcaption><strong>A real HAICHI workspace.</strong> Two local agents, one visible workflow, and status you can inspect.</figcaption>
-      </figure>
+        <div class="workflow-stage stage-reviewer">
+          <span>Reviewer</span>
+          <strong>Finds risks</strong>
+          <p>Failure modes, missing tests, and risky assumptions.</p>
+        </div>
+        <div class="workflow-stage stage-verifier">
+          <span>Verifier</span>
+          <strong>Challenges claims</strong>
+          <p>Rejects vague findings and keeps the evidence.</p>
+        </div>
+        <div class="workflow-stage stage-result">
+          <span>Result</span>
+          <strong>Fixes that hold up</strong>
+          <p>You keep the next actions worth doing first.</p>
+        </div>
+        <div class="workflow-link link-one" aria-hidden="true"></div>
+        <div class="workflow-link link-two" aria-hidden="true"></div>
+        <div class="workflow-link link-three" aria-hidden="true"></div>
+        <div class="counter-loop" aria-hidden="true">counter-evidence loop</div>
+        <div class="workflow-proof-shot">
+          <img src="haichi-product-overview.png" alt="HAICHI Command Center with local agents and inspectable workflow state" width="1280" height="720">
+          <p><strong>Runs locally in HAICHI.</strong> Real workspace state, agent roles, and handoffs stay inspectable.</p>
+        </div>
+      </div>
     </section>
 
     <section class="review-strip" aria-label="Reviewer and verifier workflow">
