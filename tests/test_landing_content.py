@@ -4,6 +4,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).parents[1]
 
+INDEXABLE_USE_CASES = {
+    "ollama-agents.html": ("Local Ollama Agents Workflow", "Ollama"),
+    "local-ai-code-review.html": ("Local AI Code Review Workflow", "Reviewer + Verifier"),
+    "windows-ollama-agents.html": ("Windows Ollama Agents Workflow", "Windows"),
+    "local-ai-coding-workflow.html": ("Local AI Coding Workflow", "repeatable workflow"),
+    "open-webui-vs-haichi.html": ("Open WebUI vs HAICHI", "Open WebUI"),
+    "visible-agent-state.html": ("Visible AI Agent State", "visible"),
+}
+
 
 class LandingContentTests(unittest.TestCase):
     @classmethod
@@ -79,15 +88,11 @@ class LandingContentTests(unittest.TestCase):
 
     def test_homepage_links_to_searchable_use_case_pages(self):
         self.assertIn('id="use-cases"', self.html)
-        self.assertIn("/use-cases/ollama-agents.html", self.html)
-        self.assertIn("/use-cases/local-ai-code-review.html", self.html)
+        for filename in INDEXABLE_USE_CASES:
+            self.assertIn(f"/use-cases/{filename}", self.html)
 
     def test_use_case_pages_have_indexable_seo_metadata(self):
-        pages = {
-            "ollama-agents.html": ("Local Ollama Agents Workflow", "Ollama"),
-            "local-ai-code-review.html": ("Local AI Code Review Workflow", "Reviewer + Verifier"),
-        }
-        for filename, expected in pages.items():
+        for filename, expected in INDEXABLE_USE_CASES.items():
             with self.subTest(filename=filename):
                 page = (ROOT / "use-cases" / filename).read_text(encoding="utf-8")
                 title, topic = expected
@@ -100,19 +105,16 @@ class LandingContentTests(unittest.TestCase):
 
     def test_sitemap_exposes_use_case_urls(self):
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-        self.assertIn("https://haichi.app/use-cases/ollama-agents.html", sitemap)
-        self.assertIn("https://haichi.app/use-cases/local-ai-code-review.html", sitemap)
+        for filename in INDEXABLE_USE_CASES:
+            self.assertIn(f"https://haichi.app/use-cases/{filename}", sitemap)
         self.assertIn("<lastmod>2026-08-02</lastmod>", sitemap)
 
     def test_text_sitemap_matches_indexable_use_case_urls(self):
         text_sitemap = (ROOT / "sitemap.txt").read_text(encoding="utf-8")
         robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
-        for url in (
-            "https://haichi.app/",
-            "https://haichi.app/use-cases/ollama-agents.html",
-            "https://haichi.app/use-cases/local-ai-code-review.html",
-        ):
-            self.assertIn(url, text_sitemap)
+        self.assertIn("https://haichi.app/", text_sitemap)
+        for filename in INDEXABLE_USE_CASES:
+            self.assertIn(f"https://haichi.app/use-cases/{filename}", text_sitemap)
         self.assertIn("Sitemap: https://haichi.app/sitemap.txt", robots)
 
 
