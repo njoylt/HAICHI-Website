@@ -104,6 +104,17 @@ class LandingContentTests(unittest.TestCase):
         self.assertIn("https://haichi.app/use-cases/local-ai-code-review.html", sitemap)
         self.assertIn("<lastmod>2026-08-02</lastmod>", sitemap)
 
+    def test_text_sitemap_matches_indexable_use_case_urls(self):
+        text_sitemap = (ROOT / "sitemap.txt").read_text(encoding="utf-8")
+        robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
+        for url in (
+            "https://haichi.app/",
+            "https://haichi.app/use-cases/ollama-agents.html",
+            "https://haichi.app/use-cases/local-ai-code-review.html",
+        ):
+            self.assertIn(url, text_sitemap)
+        self.assertIn("Sitemap: https://haichi.app/sitemap.txt", robots)
+
 
 if __name__ == "__main__":
     unittest.main()

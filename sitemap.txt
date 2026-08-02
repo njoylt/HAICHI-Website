@@ -1,0 +1,3 @@
+https://haichi.app/
+https://haichi.app/use-cases/ollama-agents.html
+https://haichi.app/use-cases/local-ai-code-review.html

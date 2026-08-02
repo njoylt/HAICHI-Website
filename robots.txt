@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://haichi.app/sitemap.xml
+Sitemap: https://haichi.app/sitemap.txt
