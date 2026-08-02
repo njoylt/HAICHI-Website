@@ -77,6 +77,33 @@ class LandingContentTests(unittest.TestCase):
         self.assertIn("dataset.copyLabel", self.script)
         self.assertIn("Text copied", self.script)
 
+    def test_homepage_links_to_searchable_use_case_pages(self):
+        self.assertIn('id="use-cases"', self.html)
+        self.assertIn("/use-cases/ollama-agents.html", self.html)
+        self.assertIn("/use-cases/local-ai-code-review.html", self.html)
+
+    def test_use_case_pages_have_indexable_seo_metadata(self):
+        pages = {
+            "ollama-agents.html": ("Local Ollama Agents Workflow", "Ollama"),
+            "local-ai-code-review.html": ("Local AI Code Review Workflow", "Reviewer + Verifier"),
+        }
+        for filename, expected in pages.items():
+            with self.subTest(filename=filename):
+                page = (ROOT / "use-cases" / filename).read_text(encoding="utf-8")
+                title, topic = expected
+                self.assertIn(title, page)
+                self.assertIn(topic, page)
+                self.assertIn('name="description"', page)
+                self.assertIn('rel="canonical"', page)
+                self.assertIn("TechArticle", page)
+                self.assertIn("HAICHI", page)
+
+    def test_sitemap_exposes_use_case_urls(self):
+        sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+        self.assertIn("https://haichi.app/use-cases/ollama-agents.html", sitemap)
+        self.assertIn("https://haichi.app/use-cases/local-ai-code-review.html", sitemap)
+        self.assertIn("<lastmod>2026-08-02</lastmod>", sitemap)
+
 
 if __name__ == "__main__":
     unittest.main()

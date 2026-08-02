@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local AI Code Review Workflow | HAICHI</title>
+  <meta name="description" content="Use HAICHI for local AI code review: one agent reviews a change, a second verifier challenges weak claims, and you keep the evidence-backed fixes.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#06111f">
+  <link rel="canonical" href="https://haichi.app/use-cases/local-ai-code-review.html">
+  <link rel="icon" type="image/png" href="../haichi-app-logo.png">
+  <link rel="apple-touch-icon" href="https://haichi.app/haichi-app-logo.png">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="HAICHI">
+  <meta property="og:title" content="Local AI Code Review Workflow | HAICHI">
+  <meta property="og:description" content="Run a Reviewer + Verifier workflow for local AI code review and keep every claim inspectable.">
+  <meta property="og:url" content="https://haichi.app/use-cases/local-ai-code-review.html">
+  <meta property="og:image" content="https://haichi.app/haichi-collaboration.png">
+  <meta property="og:image:alt" content="HAICHI collaboration workspace showing reviewer and verifier style agent work">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Local AI Code Review Workflow | HAICHI">
+  <meta name="twitter:description" content="Use one local AI agent to review code and a second to challenge weak claims before you act.">
+  <meta name="twitter:image" content="https://haichi.app/haichi-collaboration.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://haichi.app/use-cases/local-ai-code-review.html#article",
+    "headline": "Local AI code review with a Reviewer and Verifier",
+    "description": "A HAICHI workflow for using local AI agents to find code risks, challenge weak claims, and preserve evidence-backed review output.",
+    "author": {
+      "@type": "Organization",
+      "name": "HAICHI"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "HAICHI",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://haichi.app/haichi-app-logo.png"
+      }
+    },
+    "dateModified": "2026-08-02",
+    "mainEntityOfPage": "https://haichi.app/use-cases/local-ai-code-review.html"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="HAICHI home">
+      <img src="../haichi-app-logo.png" alt="" class="brand-logo" aria-hidden="true">
+      <span><strong>HAICHI</strong><small>Local agent workspace</small></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="/#features">Features</a>
+      <a href="/#first-workflow">First workflow</a>
+      <a href="/#pricing">Pricing</a>
+      <a class="nav-cta" href="/#download">Download</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article class="seo-article">
+      <p class="eyebrow"><span></span> Local AI code review</p>
+      <h1>Use one agent to review code and a second to challenge it.</h1>
+      <p class="hero-lead">A single AI review can sound confident while missing evidence. HAICHI is built for an inspectable Reviewer + Verifier workflow: one agent finds risks, the second challenges each claim, and you decide what is actually worth fixing.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="https://haichi.lemonsqueezy.com/checkout/buy/719fddae-0c70-4f2d-9127-0a2222c418ca" data-track="checkout_click" data-edition="personal" data-placement="seo_code_review">Download Personal - free</a>
+        <a class="button secondary" href="/#first-workflow">Copy the starter task</a>
+      </div>
+
+      <figure class="product-visual">
+        <img src="../haichi-collaboration.png" alt="HAICHI workspace with multiple local agents and visible handoff output" width="1280" height="720">
+        <figcaption><strong>Reviewer + Verifier.</strong> Keep the first review and the challenge pass visible together.</figcaption>
+      </figure>
+
+      <section>
+        <h2>Why a verifier pass matters</h2>
+        <p>AI code review is most useful when it stays concrete. The Reviewer should point to failure modes, missing tests, edge cases, and risky assumptions. The Verifier should reject vague findings and keep only claims supported by the change.</p>
+        <ul class="article-list">
+          <li>Run a first review with a focused local agent role.</li>
+          <li>Pass the result to a second agent that looks for unsupported or low-value claims.</li>
+          <li>Retry only the weak step instead of starting the whole discussion over.</li>
+          <li>Use workspace-scoped permissions only when you explicitly enable them.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Starter prompt</h2>
+        <p>Review this change for failure modes and missing tests. Reviewer: list concrete risks. Verifier: challenge each risk, discard weak claims, and return the three fixes worth doing first.</p>
+        <p>That small loop is enough to test whether HAICHI helps your local AI workflow before you try larger agent chains.</p>
+      </section>
+
+      <section class="related-links" aria-label="Related HAICHI pages">
+        <h2>Related</h2>
+        <a href="/use-cases/ollama-agents.html">Run local Ollama agents in one workflow</a>
+        <a href="/#download">Download HAICHI Personal</a>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="/"><img src="../haichi-app-logo.png" alt="" class="brand-logo" aria-hidden="true"><span><strong>HAICHI</strong><small>Local agent workspace</small></span></a>
+    <p>Built for local, inspectable agent work.</p>
+  </footer>
+  <script src="../app.js"></script>
+</body>
+</html>
