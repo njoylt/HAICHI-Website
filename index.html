@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HAICHI | One Local Workflow for Ollama Agents</title>
-  <meta name="description" content="I built HAICHI to replace scattered Ollama tabs, terminals, scripts, and agent chats with one inspectable local workflow. Personal is free with no activation.">
+  <title>HAICHI | Reviewer + Verifier for Local AI Workflows</title>
+  <meta name="description" content="Run local AI agent workflows with HAICHI: one agent reviews, a verifier challenges weak claims, and you keep the evidence-backed fixes. Personal is free.">
   <meta name="google-site-verification" content="yWgFdJ7h8Sa760NpMlXw9jPENgZUGm8bwr2DKXWKdbU">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#06111f">
@@ -16,14 +16,14 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="HAICHI">
-  <meta property="og:title" content="HAICHI | Keep Local Agent Work in One Workflow">
-  <meta property="og:description" content="Assign work, run a plan, and inspect what happened without juggling disconnected local-agent tools.">
+  <meta property="og:title" content="HAICHI | Reviewer + Verifier for Local AI Workflows">
+  <meta property="og:description" content="One agent reviews. The second tries to prove it wrong. Keep local AI workflow state visible before you trust the result.">
   <meta property="og:url" content="https://haichi.app/">
   <meta property="og:image" content="https://haichi.app/haichi-product-overview.png">
   <meta property="og:image:alt" content="HAICHI Command Center showing two local agents and an inspectable workflow">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="HAICHI | Keep Local Agent Work in One Workflow">
-  <meta name="twitter:description" content="Assign work, run a plan, and inspect what happened without juggling disconnected local-agent tools.">
+  <meta name="twitter:title" content="HAICHI | Reviewer + Verifier for Local AI Workflows">
+  <meta name="twitter:description" content="One agent reviews. The second tries to prove it wrong. Keep local AI workflow state visible before you trust the result.">
   <meta name="twitter:image" content="https://haichi.app/haichi-product-overview.png">
   <meta name="twitter:image:alt" content="HAICHI Command Center showing two local agents and an inspectable workflow">
   <link rel="stylesheet" href="styles.css">
@@ -132,22 +132,42 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="top">
+    <section class="hero hero-review" id="top">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> Built for people already using Ollama</p>
-        <h1>HAICHI turns scattered local agent tools into one workflow.</h1>
-        <p class="hero-lead">I built HAICHI because using local agents meant juggling Ollama tabs, terminals, scripts, and disconnected chats. Assign the work, run a plan, and inspect what happened from one local workspace.</p>
+        <p class="eyebrow"><span></span> Reviewer + Verifier for local AI code review</p>
+        <h1>One agent reviews. The second tries to prove it wrong.</h1>
+        <p class="hero-lead">HAICHI runs a local Reviewer and a local Verifier on your work. The Reviewer surfaces risks with evidence. The Verifier challenges weak claims. You keep the fixes that hold up.</p>
+        <ul class="hero-points" aria-label="HAICHI workflow highlights">
+          <li><strong>Task enters</strong><span>Paste a change, describe a bug, or scope one local workflow.</span></li>
+          <li><strong>Reviewer finds risks</strong><span>Failure modes, missing tests, and risky assumptions stay visible.</span></li>
+          <li><strong>Verifier challenges</strong><span>Unsupported claims get discarded before you act.</span></li>
+        </ul>
         <div class="hero-actions">
           <a class="button primary" href="https://haichi.lemonsqueezy.com/checkout/buy/719fddae-0c70-4f2d-9127-0a2222c418ca" data-track="checkout_click" data-edition="personal" data-placement="hero">Download Personal - free</a>
-          <a class="button secondary" href="#first-workflow">Try the first workflow</a>
+          <a class="button secondary" href="#first-workflow">Try Reviewer + Verifier</a>
         </div>
         <p class="hero-note">No activation &middot; Windows and Linux &middot; Local Ollama &middot; Up to 2 agents</p>
       </div>
 
-      <figure class="product-visual" id="product-proof">
+      <figure class="product-visual hero-product" id="product-proof">
         <img src="haichi-product-overview.png" alt="HAICHI Command Center with two local agents, active plans, and a visible agent mesh" width="1280" height="720">
+        <div class="product-callouts" aria-label="Product workflow annotations">
+          <span class="callout reviewer">Reviewer checks the change</span>
+          <span class="callout verifier">Verifier challenges weak claims</span>
+          <span class="callout retry">Retry only the weak step</span>
+        </div>
         <figcaption><strong>A real HAICHI workspace.</strong> Two local agents, one visible workflow, and status you can inspect.</figcaption>
       </figure>
+    </section>
+
+    <section class="review-strip" aria-label="Reviewer and verifier workflow">
+      <p>A local review that earns your trust</p>
+      <ol>
+        <li><strong>Task enters</strong><span>You paste a diff, select files, or describe the change.</span></li>
+        <li><strong>Reviewer finds risks</strong><span>The first agent surfaces issues with evidence.</span></li>
+        <li><strong>Verifier challenges</strong><span>The second pass looks for gaps and weak claims.</span></li>
+        <li><strong>You keep what holds</strong><span>Evidence-backed fixes are kept; weak claims are discarded.</span></li>
+      </ol>
     </section>
 
     <section class="proof" aria-label="Product verification">
@@ -155,6 +175,31 @@
       <div><strong>4</strong><span>verified release builds</span></div>
       <div><strong>Free</strong><span>Personal, no activation</span></div>
       <div><strong>Local</strong><span>plans and workspace state</span></div>
+    </section>
+
+    <section class="workflow-comparison" aria-label="Local AI workflow comparison">
+      <div class="comparison-copy">
+        <p class="eyebrow">Why HAICHI exists</p>
+        <h2>Local AI chat is not the same as local agent workflow.</h2>
+        <p>Chat windows and scripts are useful until context disappears, handoffs blur, and no one can tell which step produced the useful answer. HAICHI keeps the process visible.</p>
+      </div>
+      <div class="comparison-grid">
+        <article>
+          <span>Chat windows</span>
+          <h3>No workflow memory</h3>
+          <p>Good for one model conversation. Weak when a task needs roles, evidence, retries, and state.</p>
+        </article>
+        <article>
+          <span>Terminals + scripts</span>
+          <h3>Powerful, easy to scatter</h3>
+          <p>Logs, prompts, and outputs drift apart unless you build the workflow glue yourself.</p>
+        </article>
+        <article class="recommended">
+          <span>HAICHI workflow</span>
+          <h3>Roles, handoffs, retries</h3>
+          <p>Reviewer and Verifier passes stay connected so you can inspect what happened before trusting it.</p>
+        </article>
+      </div>
     </section>
 
     <section class="release-note" aria-label="Version 1.1 release">

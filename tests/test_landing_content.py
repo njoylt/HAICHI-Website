@@ -29,6 +29,13 @@ class LandingContentTests(unittest.TestCase):
         self.assertIn("Verifier", self.html)
         self.assertIn("Copy starter task", self.html)
 
+    def test_homepage_hero_leads_with_reviewer_verifier_workflow(self):
+        self.assertIn("One agent reviews. The second tries to prove it wrong.", self.html)
+        self.assertIn("Reviewer + Verifier for local AI code review", self.html)
+        self.assertIn("A local review that earns your trust", self.html)
+        self.assertIn("Local AI chat is not the same as local agent workflow.", self.html)
+        self.assertIn("Try Reviewer + Verifier", self.html)
+
     def test_both_editions_keep_separate_checkout_links(self):
         self.assertIn("719fddae-0c70-4f2d-9127-0a2222c418ca", self.html)
         self.assertIn("80cf9d56-652b-4b5e-baf9-1cf53c7b4eab", self.html)
