@@ -13,7 +13,7 @@ const pageParams = new URLSearchParams(window.location.search);
 const campaignAttribution = {
   source: attributionValue(pageParams.get('utm_source'), 'direct'),
   medium: attributionValue(pageParams.get('utm_medium'), 'none'),
-  campaign: attributionValue(pageParams.get('utm_campaign'), 'haichi_site_v1_1'),
+  campaign: attributionValue(pageParams.get('utm_campaign'), 'haichi_site_v1_2_personal'),
   content: attributionValue(pageParams.get('utm_content'), 'landing'),
   term: attributionValue(pageParams.get('utm_term'), 'none'),
 };
@@ -49,7 +49,7 @@ document.querySelectorAll('a[href^="https://haichi.lemonsqueezy.com/checkout/"]'
   checkoutUrl.searchParams.set('checkout[custom][campaign]', campaignAttribution.campaign);
   checkoutUrl.searchParams.set('checkout[custom][creative]', campaignAttribution.content);
   checkoutUrl.searchParams.set('checkout[custom][term]', campaignAttribution.term);
-  checkoutUrl.searchParams.set('checkout[custom][landing_version]', 'v1_1_verified_checkout');
+  checkoutUrl.searchParams.set('checkout[custom][landing_version]', 'v1_2_personal_release');
   checkoutUrl.searchParams.set('checkout[custom][edition]', edition);
   checkoutUrl.searchParams.set('checkout[custom][cta_placement]', placement);
   link.href = checkoutUrl.toString();
