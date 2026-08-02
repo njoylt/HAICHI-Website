@@ -47,7 +47,7 @@ class LandingContentTests(unittest.TestCase):
     def test_founder_offer_is_present_without_replacing_public_price(self):
         self.assertIn("Founder test", self.html)
         self.assertIn("&euro;29 for the first 10 useful Pro users.", self.html)
-        self.assertIn("Get Developer Pro (&euro;49)", self.html)
+        self.assertIn("Get Developer Pro v1.1 (&euro;49)", self.html)
         self.assertIn("Copy &euro;29 founder request", self.html)
         self.assertIn("Open feedback form", self.html)
 
@@ -60,8 +60,9 @@ class LandingContentTests(unittest.TestCase):
 
     def test_release_check_count_matches_current_project_suite(self):
         self.assertIn(
-            "<strong>194</strong><span>current source tests</span>", self.html
+            "<strong>206</strong><span>current source tests</span>", self.html
         )
+        self.assertIn("verified v1.2 Personal build", self.html)
 
     def test_feedback_template_accepts_founder_code_requests(self):
         self.assertIn("id: founder_code", self.feedback_template)
@@ -73,7 +74,15 @@ class LandingContentTests(unittest.TestCase):
         self.assertNotIn("data-command=", self.html)
 
     def test_checkout_uses_verified_landing_attribution(self):
-        self.assertIn("v1_1_verified_checkout", self.script)
+        self.assertIn("v1_2_personal_release", self.script)
+
+    def test_public_copy_separates_personal_v12_from_pro_v11(self):
+        self.assertIn("Personal v1.2.0", self.html)
+        self.assertIn("Developer Pro v1.1", self.html)
+        self.assertIn(
+            "609c1691151b452a991609ec351b718a305f2e64b146630110d5326ecf048a22",
+            self.html,
+        )
 
     def test_measurement_tracks_campaign_and_conversion_context(self):
         for field in ("utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"):
