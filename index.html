@@ -150,23 +150,30 @@
       </div>
 
       <div class="hero-workflow" id="product-proof" aria-label="Reviewer and Verifier workflow preview">
+        <div class="workflow-topbar">
+          <div>
+            <span>HAICHI local run</span>
+            <strong>Reviewer + Verifier pipeline</strong>
+          </div>
+          <p>Live workspace proof</p>
+        </div>
         <div class="workflow-stage stage-task">
-          <span>Task</span>
+          <span>Task queued</span>
           <strong>Code change</strong>
           <p>Paste a diff, describe a bug, or scope one local workflow.</p>
         </div>
         <div class="workflow-stage stage-reviewer">
-          <span>Reviewer</span>
+          <span>Reviewer running</span>
           <strong>Finds risks</strong>
           <p>Failure modes, missing tests, and risky assumptions.</p>
         </div>
         <div class="workflow-stage stage-verifier">
-          <span>Verifier</span>
+          <span>Verifier challenging</span>
           <strong>Challenges claims</strong>
           <p>Rejects vague findings and keeps the evidence.</p>
         </div>
         <div class="workflow-stage stage-result">
-          <span>Result</span>
+          <span>Evidence kept</span>
           <strong>Fixes that hold up</strong>
           <p>You keep the next actions worth doing first.</p>
         </div>
@@ -175,7 +182,9 @@
         <div class="workflow-link link-three" aria-hidden="true"></div>
         <div class="counter-loop" aria-hidden="true">counter-evidence loop</div>
         <div class="workflow-proof-shot">
-          <img src="haichi-product-overview.png" alt="HAICHI Command Center with local agents and inspectable workflow state" width="1280" height="720">
+          <div class="workflow-shot-frame">
+            <img src="haichi-product-overview.png" alt="HAICHI Command Center with local agents and inspectable workflow state" width="1280" height="720">
+          </div>
           <p><strong>Runs locally in HAICHI.</strong> Real workspace state, agent roles, and handoffs stay inspectable.</p>
         </div>
       </div>
