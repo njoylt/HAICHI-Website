@@ -47,7 +47,7 @@ class LandingContentTests(unittest.TestCase):
     def test_founder_offer_is_present_without_replacing_public_price(self):
         self.assertIn("Founder test", self.html)
         self.assertIn("&euro;29 for the first 10 useful Pro users.", self.html)
-        self.assertIn("Get Developer Pro v1.1 (&euro;49)", self.html)
+        self.assertIn("Get Developer Pro v1.1 (&euro;29)", self.html)
         self.assertIn("Copy &euro;29 founder request", self.html)
         self.assertIn("Open feedback form", self.html)
 
