@@ -135,6 +135,11 @@ class LandingContentTests(unittest.TestCase):
             self.assertIn(f"https://haichi.app/use-cases/{filename}", text_sitemap)
         self.assertIn("Sitemap: https://haichi.app/sitemap.txt", robots)
 
+    def test_discord_community_links_present(self):
+        self.assertIn('href="https://discord.gg/aQ34vxMuF"', self.html)
+        self.assertIn("Join Discord Community", self.html)
+        self.assertIn("Discord Community", self.html)
+
 
 if __name__ == "__main__":
     unittest.main()

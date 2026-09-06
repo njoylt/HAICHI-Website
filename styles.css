@@ -790,4 +790,20 @@ footer { max-width:1180px;margin:0 auto;padding:26px 24px 40px;border-top:1px so
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(53, 213, 245, 0.6);
 }
-
+/* Discord and Community additions */
+.nav-discord {
+  color: var(--blue) !important;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
