@@ -26,6 +26,8 @@
   <meta name="twitter:description" content="One agent reviews. The second tries to prove it wrong. Keep local AI workflow state visible before you trust the result.">
   <meta name="twitter:image" content="https://haichi.app/haichi-product-overview.png">
   <meta name="twitter:image:alt" content="HAICHI Command Center showing two local agents and an inspectable workflow">
+  <link rel="dns-prefetch" href="https://haichi.lemonsqueezy.com">
+  <link rel="preconnect" href="https://haichi.lemonsqueezy.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   [{
@@ -311,7 +313,7 @@
         <a class="text-link" href="https://youtube.com/watch?v=US1zJvdP2c0" target="_blank" rel="noopener" data-track="product_tour_click" data-placement="first_workflow">Watch the 38-second product tour</a>
       </div>
       <figure class="workflow-proof">
-        <img src="haichi-collaboration.png" alt="HAICHI collaboration workspace showing local agents and their visible work" width="1280" height="720">
+        <img src="haichi-collaboration.png" alt="HAICHI collaboration workspace showing local agents and their visible work" width="1280" height="720" loading="lazy" decoding="async">
         <figcaption><strong>The work stays inspectable.</strong> Agent roles, state, and output remain connected in one local workspace.</figcaption>
       </figure>
     </section>
@@ -465,6 +467,6 @@
   </footer>
 
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
