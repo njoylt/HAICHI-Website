@@ -60,7 +60,7 @@ class LandingContentTests(unittest.TestCase):
 
     def test_release_check_count_matches_current_project_suite(self):
         self.assertIn(
-            "<strong>250</strong><span>current source tests</span>", self.html
+            "<strong>277</strong><span>current source tests</span>", self.html
         )
         self.assertIn("verified v1.2 Personal build", self.html)
 
