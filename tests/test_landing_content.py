@@ -1,3 +1,5 @@
+import json
+import re
 import unittest
 from pathlib import Path
 
@@ -139,6 +141,24 @@ class LandingContentTests(unittest.TestCase):
         self.assertIn('href="https://discord.gg/aQ34vxMuF"', self.html)
         self.assertIn("Join Discord Community", self.html)
         self.assertIn("Discord Community", self.html)
+
+    def test_structured_data_json_ld_is_valid(self):
+        match = re.search(r'<script type="application/ld\+json">(.*?)</script>', self.html, re.DOTALL)
+        self.assertIsNotNone(match, "JSON-LD script block must be present")
+        data = json.loads(match.group(1))
+        self.assertIsInstance(data, list)
+        types = [item.get("@type") for item in data]
+        self.assertIn("Organization", types)
+        self.assertIn("WebSite", types)
+        self.assertIn("BreadcrumbList", types)
+        self.assertIn("SoftwareApplication", types)
+        self.assertIn("FAQPage", types)
+
+        faq = next(item for item in data if item.get("@type") == "FAQPage")
+        for q in faq.get("mainEntity", []):
+            question_text = q.get("name")
+            self.assertIn(question_text, self.html, f"FAQ question '{question_text}' must be visible in HTML")
+
 
 
 if __name__ == "__main__":

@@ -32,6 +32,37 @@
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://haichi.app/#organization",
+    "name": "HAICHI",
+    "url": "https://haichi.app/",
+    "logo": "https://haichi.app/haichi-app-logo.png",
+    "sameAs": [
+      "https://discord.gg/aQ34vxMuF"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://haichi.app/#website",
+    "name": "HAICHI",
+    "url": "https://haichi.app/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://haichi.app/#breadcrumbs",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://haichi.app/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "@id": "https://haichi.app/#software",
     "name": "HAICHI",
@@ -44,8 +75,13 @@
     "softwareVersion": "1.2.0",
     "description": "A local Windows workspace that replaces scattered Ollama tabs, terminals, scripts, and agent chats with one inspectable workflow. Personal v1.2.0 is the current stable release.",
     "featureList": [
+      "External MCP Client Hub (stdio JSON-RPC 2.0)",
+      "Zero-Config AST Code Search and Symbol Index",
+      "Sequential VRAM Scheduling for Ollama local models",
+      "Pre-Commit Secret Scanner",
       "Local Ollama model discovery",
       "Multi-agent chat and workflow orchestration",
+      "Reviewer + Verifier workflow loops",
       "Plans, discussions, and pipelines",
       "Workspace-scoped agent file permissions",
       "Optional OpenAI, Anthropic, Gemini, and GitHub Models providers",
@@ -87,10 +123,26 @@
       },
       {
         "@type": "Question",
+        "name": "Does HAICHI support external Model Context Protocol (MCP) servers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. HAICHI includes a built-in external MCP client hub supporting standard stdio JSON-RPC 2.0 servers such as GitHub, PostgreSQL, Brave Search, and custom local tools."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Are Personal and Pro separate downloads?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes. Personal v1.2.0 is the current free Windows build with no activation. Developer Pro is a separate v1.2.0 licensed build with optional cloud providers and private Tailscale access."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I access it from my phone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes with Developer Pro. Run HAICHI in Tailscale mode with a unique remote password, then open the private Tailscale address from your phone."
         }
       },
       {
@@ -431,6 +483,7 @@
       </div>
       <div class="faq-list">
         <details><summary>Does HAICHI require paid AI APIs?</summary><p>No. HAICHI can run entirely with local Ollama models. Cloud providers are optional and billed separately by those providers.</p></details>
+        <details><summary>Does HAICHI support external Model Context Protocol (MCP) servers?</summary><p>Yes. HAICHI includes a built-in external MCP client hub supporting standard stdio JSON-RPC 2.0 servers such as GitHub, PostgreSQL, Brave Search, and custom local tools.</p></details>
         <details><summary>Are Personal and Pro separate downloads?</summary><p>Yes. Personal v1.2.0 is the current free Windows build with no activation. Developer Pro is a separate v1.2.0 licensed build with optional providers, more agents, and private Tailscale access.</p></details>
         <details><summary>Can I access it from my phone?</summary><p>Yes with Developer Pro. Run HAICHI in Tailscale mode with a unique remote password, then open the private Tailscale address from your phone.</p></details>
         <details><summary>Can agents modify my files?</summary><p>Only when you explicitly enable workspace-scoped permissions for selected models and folders. Write, delete, and command execution controls are marked as risk controls and start disabled. Tool reliability depends on the selected model following structured instructions, so stronger coder or cloud models are recommended for file-changing actions.</p></details>
