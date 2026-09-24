@@ -82,7 +82,7 @@ class LandingContentTests(unittest.TestCase):
         self.assertIn("Personal v1.3.0", self.html)
         self.assertIn("Developer Pro v1.3.0", self.html)
         self.assertIn(
-            "f7f4f0ba155b17dbce0ad7bf9e9025f04c50304d507a0bd0935b8f3e9ad8d5d9",
+            "a39e74fed82cbc615b9794978c46c1817095f0dba9dff508ae434505603c5939",
             self.html,
         )
 
